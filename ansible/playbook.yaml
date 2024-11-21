@@ -32,6 +32,12 @@
     - role: ethpandaops.general.vector
       tags: [init-server, vector]
 
+- hosts: all:!localhost
+  become: true
+  roles:
+    - role: ethpandaops.general.traffic_control
+      tags: [init-server, traffic_control]
+
 - hosts: bootnode
   become: true
   roles:
