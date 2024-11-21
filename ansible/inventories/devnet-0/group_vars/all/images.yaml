@@ -1,19 +1,19 @@
 default_ethereum_client_images:
 ### Consensus layer clients
-  lighthouse: docker.ethquokkaops.io/dh/sigp/lighthouse:latest
-  lodestar: docker.ethquokkaops.io/dh/chainsafe/lodestar:latest
-  nimbus: docker.ethquokkaops.io/dh/statusim/nimbus-eth2:multiarch-latest
+  lighthouse: docker.ethquokkaops.io/dh/sigp/lighthouse:v5.3.0
+  lodestar: docker.ethquokkaops.io/dh/chainsafe/lodestar:v1.23.0
+  nimbus: docker.ethquokkaops.io/dh/statusim/nimbus-eth2:multiarch-v24.10.0
   prysm: docker.ethquokkaops.io/gcr/prysmaticlabs/prysm/beacon-chain:latest
   prysm_validator: docker.ethquokkaops.io/gcr/prysmaticlabs/prysm/validator:latest
-  teku: docker.ethquokkaops.io/dh/consensys/teku:latest
+  teku: docker.ethquokkaops.io/dh/consensys/teku:24.10
   grandine: docker.ethquokkaops.io/dh/ethpandaops/grandine:develop
 ### Execution layer clients
-  besu: docker.ethquokkaops.io/dh/hyperledger/besu:latest
-  geth: docker.ethquokkaops.io/dh/ethereum/client-go:stable
-  erigon: docker.ethquokkaops.io/dh/erigontech/erigon:main-latest
+  besu: docker.ethquokkaops.io/dh/hyperledger/besu:24.10.0
+  geth: docker.ethquokkaops.io/dh/ethereum/client-go:v1.14.12
+  erigon: docker.ethquokkaops.io/dh/erigontech/erigon:v2.60.10
   ethereumjs: docker.ethquokkaops.io/dh/ethpandaops/ethereumjs:master
-  nethermind: docker.ethquokkaops.io/dh/nethermindeth/nethermind:master
-  reth: docker.ethquokkaops.io/dh/ethpandaops/reth:main
+  nethermind: docker.ethquokkaops.io/dh/nethermind/nethermind:1.29.1
+  reth: ghcr.io/paradigmxyz/reth:v1.1.2
 
 
 default_tooling_images:
@@ -38,7 +38,7 @@ default_tooling_images:
   snooper: docker.ethquokkaops.io/dh/ethpandaops/json-rpc-snoop:1.1.0
   dora: docker.ethquokkaops.io/dh/ethpandaops/dora:master
   dugtrio: docker.ethquokkaops.io/dh/ethpandaops/dugtrio:latest
-  ethereum_genesis_generator: docker.ethquokkaops.io/dh/ethpandaops/ethereum-genesis-generator:3.4.2
+  ethereum_genesis_generator: docker.ethquokkaops.io/dh/ethpandaops/ethereum-genesis-generator:3.4.0
   mev_boost: docker.ethquokkaops.io/dh/flashbots/mev-boost:latest
   mev_relay: docker.ethquokkaops.io/dh/flashbots/mev-boost-relay:latest
   mev_builder: docker.ethquokkaops.io/dh/flashbots/mev-builder:latest
