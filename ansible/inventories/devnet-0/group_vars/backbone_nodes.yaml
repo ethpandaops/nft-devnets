@@ -1,0 +1,5 @@
+# role: ethpandaops.general.traffic_control
+traffic_control_rules:
+  - interface: eth0
+    rate_download: 500mbit
+    rate_upload: 500mbit

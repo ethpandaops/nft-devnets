@@ -102,6 +102,12 @@ node_exporter_container_image: "{{ default_tooling_images.node_exporter }}"
 prometheus_container_image: "{{ default_tooling_images.prometheus }}"
 vector_container_image: "{{ default_tooling_images.vector }}"
 json_rpc_snooper_container_image: "{{ default_tooling_images.snooper }}"
+docker_nginx_proxy_container_image: "{{ default_tooling_images.nginx }}"
+
+# role: ethpandaops.general.eth_testnet_config
+eth_testnet_config_git_enabled: true
+eth_testnet_config_git_repo: https://github.com/ethpandaops/nft-devnets.git
+eth_testnet_config_git_version: master
 
 # role: ethpandaops.general.ethereum_node
 ethereum_node_images_always_pull: true
@@ -132,7 +138,7 @@ traffic_control_rules:
 
 # role: ethpandaops.general.xatu_sentry
 xatu_sentry_container_image: "{{ default_tooling_images.xatu_sentry }}"
-xatu_sentry_config_name: "{{ ethereum_network_name }}-{{ inventory_hostname }}"
+xatu_sentry_config_name: "{{ inventory_hostname }}"
 xatu_sentry_config_server_address: "{{ secret_xatu_sentry.server_address }}"
 xatu_sentry_config_server_auth_user: "{{ secret_xatu_sentry.user }}"
 xatu_sentry_config_server_auth_password: "{{ secret_xatu_sentry.password }}"
