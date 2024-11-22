@@ -4,7 +4,7 @@ dora:
   fullnameOverride: dora
   image:
     repository: docker.ethquokkaops.io/dh/ethpandaops/dora
-    tag: master
+    tag: pk910-csr-clients-list-latest
     pullPolicy: IfNotPresent
   resources:
     requests:
@@ -12,7 +12,7 @@ dora:
       memory: 1Gi
     limits:
       cpu: 1000m
-      memory: 2Gi
+      memory: 4Gi
   ingress:
     enabled: true
     className: ingress-nginx-public
