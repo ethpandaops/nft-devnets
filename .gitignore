@@ -3,7 +3,7 @@
 .AppleDouble
 .LSOverride
 .iml
-
+nft-devnets.iml
 # Ansible
 ansible/vendor/**
 ansible/tmp/**
