@@ -16,17 +16,87 @@ teku-geth-001:
         nft-devnet-0:
           execution:
             besu:
+              - --genesis-file=/data/network-config/besu.json
+              - --bootnodes=enode://6b05942ae9375a8a8ae108371a801aad6bd63ae6ff5748e7640541e4f31f93833ca064b39dd32e625f5579c27f2ddb35db09e3a5cb8269281efc50c41a9e1cfd@192.81.208.55:30303?discport=30303,enode://2b40c68d6ceda0a257aba05c18832e2b6d533ade756086a0cd6b9412638c8780d1d99732efd8303939085423e00ce161cf0451062a38bde9864a16957b342221@152.42.253.252:30303?discport=30303,enode://0fcc2e7644116adaf145d0f48413ba94ce75ca99ff1c2a3fd1c27ea72a334d9d823fc38de2724651f8b80928be8ace375bbf64d22066750fa4e49a0176ca5e2a@209.97.182.132:30303?discport=30303
+              - --rpc-http-api=ADMIN,DEBUG,ETH,MINER,NET,TRACE,TXPOOL,WEB3
+              - --sync-mode=FULL
+              - --data-storage-format=BONSAI
+              - --bonsai-limit-trie-logs-enabled=false
+              - --ethstats=k8s-teku-geth-001:<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.ethstats_secret}>@ethstats.nft-devnet-0.ethpandaops.io:443
             nethermind:
+              - --Init.ChainSpecPath=/data/network-config/chainspec.json
+              - --JsonRpc.EnabledModules=Eth,Subscribe,Trace,TxPool,Web3,Personal,Proof,Net,Parity,Health,Rpc,Debug,Admin
+              - --Discovery.Bootnodes=enode://6b05942ae9375a8a8ae108371a801aad6bd63ae6ff5748e7640541e4f31f93833ca064b39dd32e625f5579c27f2ddb35db09e3a5cb8269281efc50c41a9e1cfd@192.81.208.55:30303?discport=30303,enode://2b40c68d6ceda0a257aba05c18832e2b6d533ade756086a0cd6b9412638c8780d1d99732efd8303939085423e00ce161cf0451062a38bde9864a16957b342221@152.42.253.252:30303?discport=30303,enode://0fcc2e7644116adaf145d0f48413ba94ce75ca99ff1c2a3fd1c27ea72a334d9d823fc38de2724651f8b80928be8ace375bbf64d22066750fa4e49a0176ca5e2a@209.97.182.132:30303?discport=30303
+              - --Init.IsMining=false
+              - --Pruning.Mode=None
+              - --config=none
+              - --EthStats.Enabled=true
+              - --EthStats.Name=k8s-teku-geth-001
+              - --EthStats.Secret=<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.ethstats_secret}>
+              - --EthStats.Server=wss://ethstats.nft-devnet-0.ethpandaops.io/api/
+              - --log=INFO
             geth:
+              - --http.api=eth,net,web3,debug,admin
+              - --http.vhosts=*
+              - --networkid=7010705318
+              - --syncmode=full
+              - --bootnodes=enode://6b05942ae9375a8a8ae108371a801aad6bd63ae6ff5748e7640541e4f31f93833ca064b39dd32e625f5579c27f2ddb35db09e3a5cb8269281efc50c41a9e1cfd@192.81.208.55:30303?discport=30303,enode://2b40c68d6ceda0a257aba05c18832e2b6d533ade756086a0cd6b9412638c8780d1d99732efd8303939085423e00ce161cf0451062a38bde9864a16957b342221@152.42.253.252:30303?discport=30303,enode://0fcc2e7644116adaf145d0f48413ba94ce75ca99ff1c2a3fd1c27ea72a334d9d823fc38de2724651f8b80928be8ace375bbf64d22066750fa4e49a0176ca5e2a@209.97.182.132:30303?discport=30303
+              - --ethstats=k8s-teku-geth-001:<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.ethstats_secret}>@ethstats.nft-devnet-0.ethpandaops.io
               - --rpc.allow-unprotected-txs
             erigon:
+              - --http.api=eth,erigon,engine,web3,net,debug,trace,txpool,admin
+              - --http.vhosts=*
+              - --ws
+              - --prune=htc
+              - --networkid=7010705318
+              - --db.size.limit=500GB
+              - --bootnodes=enode://6b05942ae9375a8a8ae108371a801aad6bd63ae6ff5748e7640541e4f31f93833ca064b39dd32e625f5579c27f2ddb35db09e3a5cb8269281efc50c41a9e1cfd@192.81.208.55:30303?discport=30303,enode://2b40c68d6ceda0a257aba05c18832e2b6d533ade756086a0cd6b9412638c8780d1d99732efd8303939085423e00ce161cf0451062a38bde9864a16957b342221@152.42.253.252:30303?discport=30303,enode://0fcc2e7644116adaf145d0f48413ba94ce75ca99ff1c2a3fd1c27ea72a334d9d823fc38de2724651f8b80928be8ace375bbf64d22066750fa4e49a0176ca5e2a@209.97.182.132:30303?discport=30303
+              - --ethstats=k8s-teku-geth-001:<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.ethstats_secret}>@ethstats.nft-devnet-0.ethpandaops.io
             ethereumjs:
           consensus:
             lodestar:
+              - --paramsFile=/data/network-config/config.yaml
+              - --genesisStateFile=/data/network-config/genesis.ssz
+              - --bootnodes=enr:-LK4QMuWGUj0-jV_jRRCkIXMLuo3pxCsXbg--YpLB6l0COdhYH_nJeDb8Imm5TWvamT0I8-R3GRoSBmPIjqYV6pE0zMIh2F0dG5ldHOIAAAAGAAAAACEZXRoMpBu_IrNYBBVED9CDwAAAAAAgmlkgnY0gmlwhMBR0DeJc2VjcDI1NmsxoQN-uOmCDNhWsEyROND46ktbg75nQxZUZducCThKyPxe7oN0Y3CCIyiDdWRwgiMo,enr:-LK4QDV6g2SnjvtWLq_j-ySKFMijf-tKU7E5uONuiP7np4i6fzKnyTXJ6qoZT0A5tIYbahJa_CCvKm-snxrNbLStsA0Ih2F0dG5ldHOIAwAAAAAAAACEZXRoMpBu_IrNYBBVED9CDwAAAAAAgmlkgnY0gmlwhJgq_fyJc2VjcDI1NmsxoQIs093LJYvnQn0dcgJpSiufiy-GZRiMOMaJ-A43g-6vAIN0Y3CCIyiDdWRwgiMo,enr:-LK4QOqnjcjLw8FpGLFZHvj-ztxz_farE2uMwYc9VBSgaOCWSOatpUhiInxLd2gL8xJYM5BXViEI7ph1XYXnqcKSRqAIh2F0dG5ldHOIAADAAAAAAACEZXRoMpBu_IrNYBBVED9CDwAAAAAAgmlkgnY0gmlwhNFhtoSJc2VjcDI1NmsxoQIDbQHDB8rwsjWaO-hHC8RnEnZEkTUP2vMM_IeXH5QYMIN0Y3CCIyiDdWRwgiMo
+              - --rest.namespace="*"
+              - --network.connectToDiscv5Bootnodes
+              - --nat=true
             teku:
+              - --network=/data/network-config/config.yaml
+              - --genesis-state=/data/network-config/genesis.ssz
+              - --p2p-discovery-bootnodes=enr:-LK4QMuWGUj0-jV_jRRCkIXMLuo3pxCsXbg--YpLB6l0COdhYH_nJeDb8Imm5TWvamT0I8-R3GRoSBmPIjqYV6pE0zMIh2F0dG5ldHOIAAAAGAAAAACEZXRoMpBu_IrNYBBVED9CDwAAAAAAgmlkgnY0gmlwhMBR0DeJc2VjcDI1NmsxoQN-uOmCDNhWsEyROND46ktbg75nQxZUZducCThKyPxe7oN0Y3CCIyiDdWRwgiMo,enr:-LK4QDV6g2SnjvtWLq_j-ySKFMijf-tKU7E5uONuiP7np4i6fzKnyTXJ6qoZT0A5tIYbahJa_CCvKm-snxrNbLStsA0Ih2F0dG5ldHOIAwAAAAAAAACEZXRoMpBu_IrNYBBVED9CDwAAAAAAgmlkgnY0gmlwhJgq_fyJc2VjcDI1NmsxoQIs093LJYvnQn0dcgJpSiufiy-GZRiMOMaJ-A43g-6vAIN0Y3CCIyiDdWRwgiMo,enr:-LK4QOqnjcjLw8FpGLFZHvj-ztxz_farE2uMwYc9VBSgaOCWSOatpUhiInxLd2gL8xJYM5BXViEI7ph1XYXnqcKSRqAIh2F0dG5ldHOIAADAAAAAAACEZXRoMpBu_IrNYBBVED9CDwAAAAAAgmlkgnY0gmlwhNFhtoSJc2VjcDI1NmsxoQIDbQHDB8rwsjWaO-hHC8RnEnZEkTUP2vMM_IeXH5QYMIN0Y3CCIyiDdWRwgiMo
+              - --data-storage-non-canonical-blocks-enabled=true
+              - --data-storage-mode=PRUNE
+              - --logging=info
+              - --Xlog-include-p2p-warnings-enabled
+              - --metrics-block-timing-tracking-enabled
+              - --ignore-weak-subjectivity-period-enabled
+              - --rest-api-docs-enabled
             prysm:
+              - --grpc-gateway-corsdomain=*
+              - --chain-config-file=/data/network-config/config.yaml
+              - --genesis-state=/data/network-config/genesis.ssz
+              - --contract-deployment-block=0
+              - --min-sync-peers=1
+              - --pprof
+              - --enable-debug-rpc-endpoints
+              - --verbosity=debug
+              - --bootstrap-node=enr:-LK4QMuWGUj0-jV_jRRCkIXMLuo3pxCsXbg--YpLB6l0COdhYH_nJeDb8Imm5TWvamT0I8-R3GRoSBmPIjqYV6pE0zMIh2F0dG5ldHOIAAAAGAAAAACEZXRoMpBu_IrNYBBVED9CDwAAAAAAgmlkgnY0gmlwhMBR0DeJc2VjcDI1NmsxoQN-uOmCDNhWsEyROND46ktbg75nQxZUZducCThKyPxe7oN0Y3CCIyiDdWRwgiMo
+              - --bootstrap-node=enr:-LK4QDV6g2SnjvtWLq_j-ySKFMijf-tKU7E5uONuiP7np4i6fzKnyTXJ6qoZT0A5tIYbahJa_CCvKm-snxrNbLStsA0Ih2F0dG5ldHOIAwAAAAAAAACEZXRoMpBu_IrNYBBVED9CDwAAAAAAgmlkgnY0gmlwhJgq_fyJc2VjcDI1NmsxoQIs093LJYvnQn0dcgJpSiufiy-GZRiMOMaJ-A43g-6vAIN0Y3CCIyiDdWRwgiMo
+              - --bootstrap-node=enr:-LK4QOqnjcjLw8FpGLFZHvj-ztxz_farE2uMwYc9VBSgaOCWSOatpUhiInxLd2gL8xJYM5BXViEI7ph1XYXnqcKSRqAIh2F0dG5ldHOIAADAAAAAAACEZXRoMpBu_IrNYBBVED9CDwAAAAAAgmlkgnY0gmlwhNFhtoSJc2VjcDI1NmsxoQIDbQHDB8rwsjWaO-hHC8RnEnZEkTUP2vMM_IeXH5QYMIN0Y3CCIyiDdWRwgiMo
             lighthouse:
+              - --testnet-dir=/data/network-config
+              - --boot-nodes=enr:-LK4QMuWGUj0-jV_jRRCkIXMLuo3pxCsXbg--YpLB6l0COdhYH_nJeDb8Imm5TWvamT0I8-R3GRoSBmPIjqYV6pE0zMIh2F0dG5ldHOIAAAAGAAAAACEZXRoMpBu_IrNYBBVED9CDwAAAAAAgmlkgnY0gmlwhMBR0DeJc2VjcDI1NmsxoQN-uOmCDNhWsEyROND46ktbg75nQxZUZducCThKyPxe7oN0Y3CCIyiDdWRwgiMo,enr:-LK4QDV6g2SnjvtWLq_j-ySKFMijf-tKU7E5uONuiP7np4i6fzKnyTXJ6qoZT0A5tIYbahJa_CCvKm-snxrNbLStsA0Ih2F0dG5ldHOIAwAAAAAAAACEZXRoMpBu_IrNYBBVED9CDwAAAAAAgmlkgnY0gmlwhJgq_fyJc2VjcDI1NmsxoQIs093LJYvnQn0dcgJpSiufiy-GZRiMOMaJ-A43g-6vAIN0Y3CCIyiDdWRwgiMo,enr:-LK4QOqnjcjLw8FpGLFZHvj-ztxz_farE2uMwYc9VBSgaOCWSOatpUhiInxLd2gL8xJYM5BXViEI7ph1XYXnqcKSRqAIh2F0dG5ldHOIAADAAAAAAACEZXRoMpBu_IrNYBBVED9CDwAAAAAAgmlkgnY0gmlwhNFhtoSJc2VjcDI1NmsxoQIDbQHDB8rwsjWaO-hHC8RnEnZEkTUP2vMM_IeXH5QYMIN0Y3CCIyiDdWRwgiMo
+              - --allow-insecure-genesis-sync
             nimbus:
+              - --network=/data/network-config
+              - --validator-monitor-auto=false
+              - --doppelganger-detection=off
+              - --log-level=INFO
+              - --light-client-data-serve=false
+              - --bootstrap-node=enr:-LK4QMuWGUj0-jV_jRRCkIXMLuo3pxCsXbg--YpLB6l0COdhYH_nJeDb8Imm5TWvamT0I8-R3GRoSBmPIjqYV6pE0zMIh2F0dG5ldHOIAAAAGAAAAACEZXRoMpBu_IrNYBBVED9CDwAAAAAAgmlkgnY0gmlwhMBR0DeJc2VjcDI1NmsxoQN-uOmCDNhWsEyROND46ktbg75nQxZUZducCThKyPxe7oN0Y3CCIyiDdWRwgiMo
+              - --bootstrap-node=enr:-LK4QDV6g2SnjvtWLq_j-ySKFMijf-tKU7E5uONuiP7np4i6fzKnyTXJ6qoZT0A5tIYbahJa_CCvKm-snxrNbLStsA0Ih2F0dG5ldHOIAwAAAAAAAACEZXRoMpBu_IrNYBBVED9CDwAAAAAAgmlkgnY0gmlwhJgq_fyJc2VjcDI1NmsxoQIs093LJYvnQn0dcgJpSiufiy-GZRiMOMaJ-A43g-6vAIN0Y3CCIyiDdWRwgiMo
+              - --bootstrap-node=enr:-LK4QOqnjcjLw8FpGLFZHvj-ztxz_farE2uMwYc9VBSgaOCWSOatpUhiInxLd2gL8xJYM5BXViEI7ph1XYXnqcKSRqAIh2F0dG5ldHOIAADAAAAAAACEZXRoMpBu_IrNYBBVED9CDwAAAAAAgmlkgnY0gmlwhNFhtoSJc2VjcDI1NmsxoQIDbQHDB8rwsjWaO-hHC8RnEnZEkTUP2vMM_IeXH5QYMIN0Y3CCIyiDdWRwgiMo
 
 
   geth:
