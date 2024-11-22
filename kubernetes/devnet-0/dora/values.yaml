@@ -5,13 +5,13 @@ dora:
   image:
     repository: docker.ethquokkaops.io/dh/ethpandaops/dora
     tag: pk910-csr-clients-list-latest
-    pullPolicy: IfNotPresent
+    pullPolicy: Always
   resources:
     requests:
       cpu: 500m
       memory: 1Gi
     limits:
-      cpu: 1000m
+      cpu: 2000m
       memory: 4Gi
   ingress:
     enabled: true
