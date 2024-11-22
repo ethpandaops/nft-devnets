@@ -159,6 +159,7 @@ gen_basic_auth_nginx_password: "{{ secret_nginx_shared_basic_auth.password }}"
 # role: ethpandaops.general.docker_nginx_proxy
 docker_nginx_proxy_container_image: docker.ethquokkaops.io/dh/library/nginx:alpine
 docker_nginx_proxy_acme_companion_container_image: docker.ethquokkaops.io/dh/nginxproxy/acme-companion
+docker_nginx_proxy_docker_gen_container_image: docker.ethquokkaops.io/dh/nginxproxy/docker-gen
 docker_nginx_proxy_container_name: nginx-proxy
 docker_nginx_proxy_default_email: "certs@{{ domain }}"
 docker_nginx_proxy_docker_gen_container_name: nginx-proxy-gen
