@@ -225,7 +225,7 @@ teku-geth-001:
           DEPOSIT_CONTRACT_BLOCK_URI=https://config.nft-devnet-0.ethpandaops.io/cl/deposit_contract_block.txt;
           DEPOSIT_CONTRACT_BLOCK_HASH_URI=https://config.nft-devnet-0.ethpandaops.io/cl/deposit_contract_block_hash.txt;
           GENESIS_CONFIG_URI=https://config.nft-devnet-0.ethpandaops.io/cl/config.yaml;
-          GENESIS_SSZ_URI=https://config.nft-devnet-0.ethpandaops.io/cl/genesis.ssz;
+          GENESIS_SSZ_URI=https://github.com/ethpandaops/nft-devnets/raw/refs/heads/master/network-configs/devnet-0/metadata/genesis.ssz\?download\=true;
           mkdir -p /data/network-config;
           curl -s https://config.nft-devnet-0.ethpandaops.io/api/v1/nodes/inventory | jq -r '.ethereum_pairs[] | .consensus.enr' > /data/network-config/bootstrap_nodes.txt;
           if ! [ -f /data/network-config/genesis.ssz ];
