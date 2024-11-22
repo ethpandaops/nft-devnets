@@ -31,6 +31,8 @@ dora:
       value: "true"
     - name: FRONTEND_SHOW_SENSITIVE_PEER_INFOS
       value: "true"
+    - name: INDEXER_MAX_PARALLEL_VALIDATOR_SET_REQUESTS
+      value: "4"
   postgresql:
     name: "dora-postgresql"
     fullnameOverride: "dora-postgresql"
