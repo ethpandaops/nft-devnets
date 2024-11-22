@@ -9,7 +9,7 @@ ethereum_el_bootnodes:
   - "{{ hostvars['bootnode-3']['ethereum_node_fact_el_enode'] }}"
 
 # role: eth_inventory_web
-eth_inventory_web_container_image: docker.ethquokkaops.io/dh/nginx:alpine
+eth_inventory_web_container_image: docker.ethquokkaops.io/dh/library/nginx:alpine
 eth_inventory_web_container_networks: "{{ docker_networks_shared }}"
 eth_inventory_web_container_env:
   VIRTUAL_HOST: "{{ server_fqdn }}"
