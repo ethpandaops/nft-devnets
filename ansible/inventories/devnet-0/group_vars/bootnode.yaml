@@ -17,6 +17,9 @@ eth_inventory_web_container_env:
   VIRTUAL_DEST: "/"
   LETSENCRYPT_HOST: "{{ server_fqdn }}"
 
+# role: ethpandaops.general.cl_bootnode
+cl_bootnode_container_image: "docker.ethquokkaops.io/dh/protolambda/eth2-bootnode:cleanup"
+
 # role: ethpandaops.general.ethereum_node
 ethereum_node_el: geth
 ethereum_node_cl: teku
