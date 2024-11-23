@@ -34,6 +34,7 @@
 
 - hosts: all:!localhost
   become: true
+  gather_facts: false
   roles:
     - role: ethpandaops.general.traffic_control
       tags: [init-server, traffic_control]
