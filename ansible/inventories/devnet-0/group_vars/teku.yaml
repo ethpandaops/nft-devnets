@@ -47,6 +47,9 @@ teku_container_command_extra_args:
   - --metrics-block-timing-tracking-enabled
   - --ignore-weak-subjectivity-period-enabled
   - --rest-api-docs-enabled
+  - --Xp2p-sync-batch-size=5
+  - --Xp2p-sync-max-pending-batches=50
+
 teku_validator_container_volumes:
   - "{{ teku_validator_datadir }}:/validator-data"
 teku_validator_datadir: /data/teku-validator

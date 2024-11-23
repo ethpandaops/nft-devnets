@@ -90,6 +90,21 @@ bootstrap_default_user_authorized_keys_github_all:
   - skylenet
   - pk910
   - mattevans
+  - kasey
+  - terencechain
+  - potuz
+  - nisdas
+  - prestonvanloon
+  - rkapka
+  - nalepae
+  - james-prysm
+  - AgeManning
+  - ethdreamer
+  - paulhauner
+  - pawanjay176
+  - michaelsproul
+  - antondlr
+  - realbigsean
 bootstrap_default_user_authorized_keys_github: >
   {{
     (bootstrap_default_user_authorized_keys_github_all | default([])) +
