@@ -30,6 +30,8 @@ lodestar_container_env:
   VIRTUAL_HOST: "{{ ethereum_node_beacon_hostname }}"
   VIRTUAL_PORT: "{{ ethereum_node_cl_ports_http_beacon | string }}"
   LETSENCRYPT_HOST: "{{ ethereum_node_beacon_hostname }}"
+  NODE_OPTIONS: "--max-old-space-size=16384"
+
 lodestar_container_volumes:
   - "{{ lodestar_datadir }}:/data"
   - "{{ lodestar_auth_jwt_path }}:/execution-auth.jwt:ro"
@@ -41,6 +43,7 @@ lodestar_container_command_extra_args:
   - --rest.namespace="*"
   - --network.connectToDiscv5Bootnodes
   - --nat=true
+
 lodestar_validator_container_volumes:
   - "{{ lodestar_validator_datadir }}:/validator-data"
   - "{{ eth_testnet_config_dir }}:/network-config:ro"
