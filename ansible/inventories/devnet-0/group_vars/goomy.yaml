@@ -3,4 +3,4 @@ goomy_container_networks: "{{ docker_networks_shared }}"
 goomy_rpc_urls:
   - "{% for host in groups['execution_node'] %}https://{{ secret_nginx_shared_basic_auth.name }}:{{ secret_nginx_shared_basic_auth.password }}@rpc.{{ host }}.{{ network_subdomain }},{% endfor %}"
 goomy_scenario: "combined"
-goomy_extra_args: ["--sidecars", "3", "--throughput", "6", "--max-pending", "30"]
+goomy_extra_args: ["--sidecars", "3", "--throughput", "10", "--basefee", "200", "--blobfee", "200", "--tipfee", "200", "--max-pending", "30"]
