@@ -2,4 +2,4 @@
 traffic_control_rules:
   - interface: eth0
     rate_download: 100mbit
-    rate_upload: 20mbit
+    rate_upload: 50mbit
