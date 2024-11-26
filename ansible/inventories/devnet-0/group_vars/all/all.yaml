@@ -144,8 +144,8 @@ ethereum_node_json_rpc_snooper_engine_name: "snooper-engine"
 # role: ethpandaops.general.traffic_control
 traffic_control_rules:
   - interface: eth0
-    rate_download: 30mbit
-    rate_upload: 15mbit
+    rate_download: 1000mbit
+    rate_upload: 1000mbit
 
 # role: ethpandaops.general.xatu_sentry
 xatu_sentry_container_image: "{{ default_tooling_images.xatu_sentry }}"
