@@ -1,7 +1,7 @@
 default_ethereum_client_images:
 ### Consensus layer clients
   lighthouse: docker.ethquokkaops.io/dh/sigp/lighthouse:latest-unstable
-  lodestar: docker.ethquokkaops.io/dh/chainsafe/lodestar:v1.23.0
+  lodestar: docker.ethquokkaops.io/dh/ethpandaops/lodestar:nft-devnet-0-231a347
   nimbus: docker.ethquokkaops.io/dh/statusim/nimbus-eth2:multiarch-v24.10.0
   prysm: docker.ethquokkaops.io/gcr/prysmaticlabs/prysm/beacon-chain:latest
   prysm_validator: docker.ethquokkaops.io/gcr/prysmaticlabs/prysm/validator:latest
