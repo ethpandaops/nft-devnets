@@ -48,7 +48,6 @@ teku_container_command_extra_args:
   - --ignore-weak-subjectivity-period-enabled
   - --rest-api-docs-enabled
   - --Xp2p-sync-batch-size=5
-  - --Xp2p-sync-max-pending-batches=50
   - --validators-performance-tracking-mode=NONE
 
 teku_validator_container_volumes:
