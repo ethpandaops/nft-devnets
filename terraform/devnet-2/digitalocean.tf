@@ -301,60 +301,6 @@ resource "cloudflare_record" "server_record_beacon_v6" {
   ttl     = 120
 }
 
-resource "cloudflare_record" "server_record_xatu_v4" {
-  for_each = {
-    for vm in local.digitalocean_vms : "${vm.id}" => vm if contains(vm.tags, "group_name:xatu")
-  }
-  zone_id = data.cloudflare_zone.default.id
-  name    = "xatu.${var.ethereum_network}"
-  type    = "A"
-  value   = digitalocean_droplet.main[each.value.id].ipv4_address
-  proxied = false
-  ttl     = 120
-}
-
-resource "cloudflare_record" "xatu-server" {
-  zone_id = data.cloudflare_zone.default.id
-  name    = "server.xatu.${var.ethereum_network}"
-  type    = "CNAME"
-  value   = "xatu.${var.ethereum_network}.ethpandaops.io"
-  proxied = false
-  ttl     = 120
-}
-
-resource "cloudflare_record" "xatu-wildcard" {
-  zone_id = data.cloudflare_zone.default.id
-  name    = "*.xatu.${var.ethereum_network}"
-  type    = "CNAME"
-  value   = "xatu.${var.ethereum_network}.ethpandaops.io"
-  proxied = true
-  ttl     = 1
-}
-
-resource "cloudflare_record" "server_record_mevrelay_v4" {
-  for_each = {
-    for vm in local.digitalocean_vms : "${vm.id}" => vm if contains(vm.tags, "group_name:mevrelay")
-  }
-  zone_id = data.cloudflare_zone.default.id
-  name    = "mev-relay.${var.ethereum_network}"
-  type    = "A"
-  value   = digitalocean_droplet.main[each.value.id].ipv4_address
-  proxied = false
-  ttl     = 120
-}
-
-resource "cloudflare_record" "server_record_mevapi_v4" {
-  for_each = {
-    for vm in local.digitalocean_vms : "${vm.id}" => vm if contains(vm.tags, "group_name:mevrelay")
-  }
-  zone_id = data.cloudflare_zone.default.id
-  name    = "mev-api.${var.ethereum_network}"
-  type    = "A"
-  value   = digitalocean_droplet.main[each.value.id].ipv4_address
-  proxied = false
-  ttl     = 120
-}
-
 
 ////////////////////////////////////////////////////////////////////////////////////////
 //                          GENERATED FILES AND OUTPUTS

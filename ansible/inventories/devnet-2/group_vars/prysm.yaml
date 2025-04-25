@@ -54,9 +54,9 @@ prysm_container_command_extra_simple_args:
   - --chain-config-file=/network-config/config.yaml
   - --genesis-state=/network-config/genesis.ssz
   - --contract-deployment-block={{ ethereum_network_deposit_contract_block }}
-  - --delay-block-broadcast=2s
   - --enable-debug-rpc-endpoints
   - --verbosity=debug
+  - --delay-block-broadcast=2s
 
 prysm_container_command_extra_bootnode_args: >-
   {{ ethereum_cl_bootnodes | map('regex_replace', '^', '--bootstrap-node=') | list }}
@@ -70,5 +70,4 @@ prysm_validator_container_entrypoint:
 prysm_validator_container_command_extra_args:
   - --chain-config-file=/network-config/config.yaml
   - --graffiti={{ ansible_hostname }}
-  - --delay-block-broadcast=2s
 prysm_validator_datadir: /data/prysm-validator

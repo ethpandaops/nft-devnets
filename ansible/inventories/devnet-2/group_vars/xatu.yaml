@@ -42,9 +42,9 @@ xatu_sentry_config:
       address: "{{ xatu_sentry_config_server_address }}"
       headers:
         authorization: "Basic {{ (xatu_sentry_config_server_auth_user + ':' + xatu_sentry_config_server_auth_password) | b64encode }}"
-      maxExportBatchSize: 32
+      maxExportBatchSize: 128
       maxQueueSize: 10000
-      workers: 5
+      workers: 10
       tls: true
     filter:
       eventNames:
