@@ -13,15 +13,15 @@ variable "digitalocean_ssh_key_name" {
 
 variable "digitalocean_regions" {
   default = [
-    "fra1",
-    "tor1",
-    "nyc1",
-    "sgp1",
     "ams3",
-    "lon1",
     "blr1",
+    "lon1",
+    "nyc1",
+    "nyc2",
+    "nyc3",
     "sfo3",
-    "syd1"
+    "syd1",
+    "tor1"
   ]
 }
 
