@@ -225,9 +225,9 @@ resource "digitalocean_firewall" "main" {
 //                                   DNS NAMES
 ////////////////////////////////////////////////////////////////////////////////////////
 
-data "cloudflare_zone" "default" {
-  name = "ethpandaops.io"
-}
+#data "cloudflare_zone" "default" {
+#  name = "ethpandaops.io"
+#}
 
 #resource "cloudflare_record" "server_record_v4" {
 #  for_each = {
