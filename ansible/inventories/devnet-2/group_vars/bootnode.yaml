@@ -33,9 +33,7 @@ prysm_container_volumes:
   - "{{ eth_testnet_config_dir }}:/network-config:ro"
 prysm_container_entrypoint:
   - /app/cmd/beacon-chain/beacon-chain
-prysm_container_command_extra_args: >-
-  {{ prysm_container_command_extra_simple_args + prysm_container_command_extra_bootnode_args }}
-prysm_container_command_extra_simple_args:
+prysm_container_command_extra_args:
   - --grpc-gateway-corsdomain=*
   - --chain-config-file=/network-config/config.yaml
   - --genesis-state=/network-config/genesis.ssz
