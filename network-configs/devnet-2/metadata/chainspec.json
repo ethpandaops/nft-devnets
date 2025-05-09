@@ -70,15 +70,15 @@
       }
     },
     "depositContractAddress": "0x00000000219ab540356cBB839Cbe05303d7705Fa",
-    "eip2537TransitionTimestamp": "0x7f018289",
-    "eip2935TransitionTimestamp": "0x7f018289",
-    "eip6110TransitionTimestamp": "0x7f018289",
-    "eip7002TransitionTimestamp": "0x7f018289",
-    "eip7251TransitionTimestamp": "0x7f018289",
-    "eip7623TransitionTimestamp": "0x7f018289",
-    "eip7702TransitionTimestamp": "0x7f018289",
-    "eip7692TransitionTimestamp": "0x7f018289",
-    "eip7594TransitionTimestamp": "0x7f018289"
+    "eip2537TransitionTimestamp": "0x7f01b9f8",
+    "eip2935TransitionTimestamp": "0x7f01b9f8",
+    "eip6110TransitionTimestamp": "0x7f01b9f8",
+    "eip7002TransitionTimestamp": "0x7f01b9f8",
+    "eip7251TransitionTimestamp": "0x7f01b9f8",
+    "eip7623TransitionTimestamp": "0x7f01b9f8",
+    "eip7702TransitionTimestamp": "0x7f01b9f8",
+    "eip7692TransitionTimestamp": "0x7f01b9f8",
+    "eip7594TransitionTimestamp": "0x7f01b9f8"
   },
   "genesis": {
     "seal": {
@@ -89,7 +89,7 @@
     },
     "difficulty": "0x0",
     "author": "0x0000000000000000000000000000000000000000",
-    "timestamp": "0x681e23cd",
+    "timestamp": "0x681e5b3c",
     "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "extraData": "",
     "gasLimit": "0x2255100"
