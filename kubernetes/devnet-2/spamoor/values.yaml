@@ -27,8 +27,6 @@ spamoor:
 
   privateKey: "<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.spamoor_private_key}>"
   rpcEndpoints:
-  # Rpc
-  - "http://geth-teku-001:8545"
   - "https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.bootnode-1.nft-devnet-2.ethpandaops.io"
   - "https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.bootnode-2.nft-devnet-2.ethpandaops.io"
   - "https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.bootnode-3.nft-devnet-2.ethpandaops.io"
