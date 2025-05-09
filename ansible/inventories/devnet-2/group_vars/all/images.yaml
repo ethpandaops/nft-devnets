@@ -8,6 +8,7 @@ default_ethereum_client_images:
 
 
 default_tooling_images:
+  cl_bootnode: docker.ethquokkaops.io/dh/protolambda/eth2-bootnode:cleanup
   xatu_sentry: docker.ethquokkaops.io/dh/ethpandaops/xatu:latest
   ethereum_metrics_exporter: docker.ethquokkaops.io/dh/ethpandaops/ethereum-metrics-exporter:0.27.1-debian
   tx_fuzz: docker.ethquokkaops.io/dh/ethpandaops/tx-fuzz:latest
