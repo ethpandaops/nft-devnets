@@ -93,7 +93,7 @@ xatu-cannon:
     tracing:
       enabled: false
     ethereum:
-      beaconNodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@beacon.bootnode-1.nft-devnet-2.ethpandaops.io
+      beaconNodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.bootnode-1.nft-devnet-2.ethpandaops.io
       beaconNodeHeaders: {}
       blockCacheSize: 300
       blockCacheTtl: 1h
