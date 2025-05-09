@@ -31,7 +31,7 @@ default_tooling_images:
   snooper: docker.ethquokkaops.io/dh/ethpandaops/json-rpc-snoop:1.1.0
   dora: docker.ethquokkaops.io/dh/ethpandaops/dora:master
   dugtrio: docker.ethquokkaops.io/dh/ethpandaops/dugtrio:latest
-  ethereum_genesis_generator: docker.ethquokkaops.io/dh/ethpandaops/ethereum-genesis-generator:3.4.0
+  ethereum_genesis_generator: docker.ethquokkaops.io/dh/ethpandaops/ethereum-genesis-generator:4.0.5
   mev_boost: docker.ethquokkaops.io/dh/flashbots/mev-boost:latest
   mev_relay: docker.ethquokkaops.io/dh/flashbots/mev-boost-relay:latest
   mev_builder: docker.ethquokkaops.io/dh/flashbots/mev-builder:latest
