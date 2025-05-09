@@ -8,29 +8,25 @@ default_ethereum_client_images:
 
 
 default_tooling_images:
-  cl_bootnode: docker.ethquokkaops.io/dh/protolambda/eth2-bootnode:cleanup
-  xatu_sentry: docker.ethquokkaops.io/dh/ethpandaops/xatu:latest
-  ethereum_metrics_exporter: docker.ethquokkaops.io/dh/ethpandaops/ethereum-metrics-exporter:0.27.1-debian
-  tx_fuzz: docker.ethquokkaops.io/dh/ethpandaops/tx-fuzz:latest
+  mev_boost: docker.ethquokkaops.io/dh/ethpandaops/mev-boost:electra
+  mev_boost_relay: docker.ethquokkaops.io/dh/ethpandaops/mev-boost-relay:electra-7fd62d4
+  xatu_sentry: docker.ethquokkaops.io/dh/ethpandaops/xatu:1.0.25-debian
+  ethereum_metrics_exporter: docker.ethquokkaops.io/dh/ethpandaops/ethereum-metrics-exporter:latest
+  tx_fuzz: docker.ethquokkaops.io/dh/ethpandaops/tx-fuzz:pr-56
   forkmon: docker.ethquokkaops.io/dh/skylenet/nodemonitor:darkmode
   forky: docker.ethquokkaops.io/dh/ethpandaops/forky:latest
   fauceth: docker.ethquokkaops.io/dh/skylenet/fauceth:fix_fee_estimation
   powfaucet: docker.ethquokkaops.io/dh/pk910/powfaucet:v2-stable
   ethstats: docker.ethquokkaops.io/dh/skylenet/ethstats-server:poa-no-geoip
   homepage: docker.ethquokkaops.io/dh/ethpandaops/ethereum-testnet-homepage:latest
-  checkpointz: docker.ethquokkaops.io/dh/ethpandaops/checkpointz:latest
+  checkpointz: docker.ethquokkaops.io/dh/ethpandaops/checkpointz:0.0.12-electra
   blockscout: docker.ethquokkaops.io/dh/blockscout/blockscout:latest
   blockscout_frontend: docker.ethquokkaops.io/gh/blockscout/frontend:latest
   beacon_metrics_gazer: docker.ethquokkaops.io/dh/dapplion/beacon-metrics-gazer:latest
   eth_fauceth: docker.ethquokkaops.io/dh/chainflag/eth-faucet:latest
   blobscan: docker.ethquokkaops.io/dh/blossomlabs/blobscan:latest
   blobscan_indexer: docker.ethquokkaops.io/dh/blossomlabs/blobscan-indexer:latest
-  node_exporter: docker.ethquokkaops.io/dh/prom/node-exporter:v1.5.0
-  vector: docker.ethquokkaops.io/dh/timberio/vector:0.46.1-alpine
-  nginx: docker.ethquokkaops.io/dh/nginx:alpine
-  prometheus: docker.ethquokkaops.io/dh/prom/prometheus:v2.40.7
-  snooper: docker.ethquokkaops.io/dh/ethpandaops/json-rpc-snoop:1.1.0
-  dora: docker.ethquokkaops.io/dh/ethpandaops/dora:master
+  dora: docker.ethquokkaops.io/dh/ethpandaops/dora:pk910-basic-api-latest
   dugtrio: docker.ethquokkaops.io/dh/ethpandaops/dugtrio:latest
   ethereum_genesis_generator: docker.ethquokkaops.io/dh/ethpandaops/ethereum-genesis-generator:4.0.5
   mev_boost: docker.ethquokkaops.io/dh/flashbots/mev-boost:latest
@@ -38,6 +34,15 @@ default_tooling_images:
   mev_builder: docker.ethquokkaops.io/dh/flashbots/mev-builder:latest
   tracoor: docker.ethquokkaops.io/dh/ethpandaops/tracoor:latest
   ncli: docker.ethquokkaops.io/dh/status-im/nimbus-eth2:unstable
-  lcli: docker.ethquokkaops.io/dh/sigp/lighthouse:electra-devnet-1
+  lcli: docker.ethquokkaops.io/dh/ethpandaops/lighthouse:unstable-a94b12blo
   zcli: electra
-  assertoor: docker.ethquokkaops.io/dh/ethpandaops/assertoor:latest
+  assertoor: docker.ethquokkaops.io/dh/ethpandaops/assertoor:master-latest
+  erpc: docker.ethquokkaops.io/gh/erpc/erpc:main
+  prometheus: docker.ethquokkaops.io/dh/prom/prometheus:v2.40.7
+  node_exporter: docker.ethquokkaops.io/dh/prom/node-exporter:v1.5.0
+  cl_bootnode: docker.ethquokkaops.io/dh/protolambda/eth2-bootnode:cleanup
+  json_rpc_snooper: docker.ethquokkaops.io/dh/ethpandaops/json-rpc-snoop:1.1.0
+  nginx_proxy: docker.ethquokkaops.io/dh/nginx:alpine
+  nginx_proxy_gen: docker.ethquokkaops.io/dh/nginxproxy/docker-gen
+  nginx_proxy_acme: docker.ethquokkaops.io/dh/nginxproxy/acme-companion
+  vector: docker.ethquokkaops.io/dh/timberio/vector:0.30.0-alpine
