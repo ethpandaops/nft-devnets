@@ -107,7 +107,8 @@ bootstrap_default_user_authorized_keys_github_all:
   - pk910
   - marioevz
   - mattevans
-  - jtraglia
+  - potuz
+  - nisdas
 bootstrap_default_user_authorized_keys_github: >
   {{
     (bootstrap_default_user_authorized_keys_github_all | default([])) +
