@@ -330,5 +330,5 @@ resource "local_file" "ansible_inventory" {
       )
     }
   )
-  filename = "../../ansible/inventories/devnet-2/inventory.ini"
+  filename = "../../ansible/inventories/devnet-3/inventory.ini"
 }

@@ -27,7 +27,7 @@ terraform {
     skip_s3_checksum            = true
     region                      = "us-east-1"
     bucket                      = "merge-testnets"
-    key                         = "infrastructure/nft-devnet-2/terraform.tfstate"
+    key                         = "infrastructure/nft-devnet-3/terraform.tfstate"
   }
 }
 
@@ -50,7 +50,7 @@ variable "cloudflare_api_token" {
 
 variable "ethereum_network" {
   type    = string
-  default = "nft-devnet-2"
+  default = "nft-devnet-3"
 }
 
 variable "base_cidr_block" {
