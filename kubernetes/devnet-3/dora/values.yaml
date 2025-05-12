@@ -66,3 +66,827 @@ dora:
   - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.bootnode-5.nft-devnet-3.ethpandaops.io
     name: bootnode-5
     priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-1.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-1
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-10.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-10
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-100.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-100
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-1000.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-1000
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-101.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-101
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-102.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-102
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-103.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-103
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-104.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-104
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-105.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-105
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-106.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-106
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-107.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-107
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-108.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-108
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-109.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-109
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-11.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-11
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-110.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-110
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-111.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-111
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-112.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-112
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-113.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-113
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-114.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-114
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-115.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-115
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-116.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-116
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-117.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-117
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-118.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-118
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-119.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-119
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-12.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-12
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-120.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-120
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-121.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-121
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-122.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-122
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-123.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-123
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-124.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-124
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-125.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-125
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-126.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-126
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-127.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-127
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-128.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-128
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-129.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-129
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-13.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-13
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-130.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-130
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-131.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-131
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-132.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-132
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-133.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-133
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-134.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-134
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-135.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-135
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-136.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-136
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-137.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-137
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-138.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-138
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-139.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-139
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-14.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-14
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-140.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-140
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-141.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-141
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-142.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-142
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-143.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-143
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-144.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-144
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-145.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-145
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-146.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-146
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-147.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-147
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-148.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-148
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-149.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-149
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-15.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-15
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-150.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-150
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-151.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-151
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-152.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-152
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-153.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-153
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-154.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-154
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-155.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-155
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-156.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-156
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-157.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-157
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-158.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-158
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-159.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-159
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-16.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-16
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-160.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-160
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-161.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-161
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-162.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-162
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-163.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-163
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-164.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-164
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-165.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-165
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-166.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-166
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-167.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-167
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-168.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-168
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-169.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-169
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-17.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-17
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-170.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-170
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-171.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-171
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-172.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-172
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-173.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-173
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-174.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-174
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-175.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-175
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-176.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-176
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-177.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-177
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-178.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-178
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-179.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-179
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-18.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-18
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-180.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-180
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-181.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-181
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-182.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-182
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-183.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-183
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-184.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-184
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-185.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-185
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-186.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-186
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-187.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-187
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-188.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-188
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-189.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-189
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-19.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-19
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-190.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-190
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-191.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-191
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-192.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-192
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-193.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-193
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-194.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-194
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-195.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-195
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-196.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-196
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-197.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-197
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-198.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-198
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-199.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-199
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-2.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-2
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.prysm-geth-20.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-20
+    priority: -1
+  executionEndpoints:
+  # Rpc
+  - url: http://geth-teku-001:8545
+    name: rpc-teku-geth-001
+    archive: true
+    priority: 1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.bootnode-1.nft-devnet-3.ethpandaops.io
+    name: bootnode-1
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.bootnode-2.nft-devnet-3.ethpandaops.io
+    name: bootnode-2
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.bootnode-3.nft-devnet-3.ethpandaops.io
+    name: bootnode-3
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.bootnode-4.nft-devnet-3.ethpandaops.io
+    name: bootnode-4
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.bootnode-5.nft-devnet-3.ethpandaops.io
+    name: bootnode-5
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-1.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-1
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-10.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-10
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-100.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-100
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-1000.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-1000
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-101.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-101
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-102.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-102
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-103.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-103
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-104.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-104
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-105.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-105
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-106.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-106
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-107.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-107
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-108.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-108
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-109.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-109
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-11.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-11
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-110.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-110
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-111.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-111
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-112.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-112
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-113.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-113
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-114.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-114
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-115.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-115
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-116.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-116
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-117.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-117
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-118.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-118
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-119.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-119
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-12.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-12
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-120.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-120
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-121.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-121
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-122.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-122
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-123.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-123
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-124.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-124
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-125.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-125
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-126.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-126
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-127.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-127
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-128.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-128
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-129.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-129
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-13.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-13
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-130.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-130
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-131.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-131
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-132.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-132
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-133.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-133
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-134.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-134
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-135.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-135
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-136.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-136
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-137.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-137
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-138.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-138
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-139.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-139
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-14.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-14
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-140.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-140
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-141.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-141
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-142.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-142
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-143.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-143
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-144.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-144
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-145.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-145
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-146.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-146
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-147.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-147
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-148.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-148
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-149.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-149
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-15.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-15
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-150.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-150
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-151.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-151
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-152.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-152
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-153.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-153
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-154.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-154
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-155.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-155
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-156.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-156
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-157.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-157
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-158.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-158
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-159.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-159
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-16.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-16
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-160.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-160
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-161.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-161
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-162.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-162
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-163.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-163
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-164.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-164
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-165.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-165
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-166.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-166
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-167.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-167
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-168.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-168
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-169.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-169
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-17.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-17
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-170.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-170
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-171.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-171
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-172.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-172
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-173.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-173
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-174.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-174
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-175.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-175
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-176.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-176
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-177.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-177
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-178.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-178
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-179.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-179
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-18.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-18
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-180.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-180
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-181.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-181
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-182.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-182
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-183.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-183
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-184.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-184
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-185.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-185
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-186.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-186
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-187.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-187
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-188.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-188
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-189.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-189
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-19.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-19
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-190.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-190
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-191.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-191
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-192.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-192
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-193.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-193
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-194.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-194
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-195.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-195
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-196.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-196
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-197.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-197
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-198.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-198
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-199.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-199
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-2.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-2
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.prysm-geth-20.nft-devnet-3.ethpandaops.io
+    name: prysm-geth-20
+    priority: -1
+    archive: false
