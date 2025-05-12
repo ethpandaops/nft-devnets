@@ -57,7 +57,7 @@ prysm_container_command_extra_simple_args:
   - --enable-debug-rpc-endpoints
   - --verbosity=debug
   - --delay-block-broadcast=2s
-
+  - --use-rlnc
 prysm_container_command_extra_bootnode_args: >-
   {{ ethereum_cl_bootnodes | map('regex_replace', '^', '--bootstrap-node=') | list }}
 
@@ -71,4 +71,5 @@ prysm_validator_container_command_extra_args:
   - --chain-config-file=/network-config/config.yaml
   - --graffiti={{ ansible_hostname }}
   - --suggested-gas-limit=60000000
+  - --use-rlnc
 prysm_validator_datadir: /data/prysm-validator

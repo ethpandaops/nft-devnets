@@ -133,3 +133,9 @@
   roles:
     - role: ethpandaops.general.goomy
       tags: [goomy]
+
+- hosts: xatu
+  become: true
+  roles:
+    - role: ethpandaops.general.xatu_sentry
+      tags: [xatu_sentry, xatu]
