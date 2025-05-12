@@ -226,19 +226,19 @@ resource "digitalocean_firewall" "main" {
 ////////////////////////////////////////////////////////////////////////////////////////
 
 data "cloudflare_zone" "default" {
- name = "ethpandaops.io"
+  name = "ethpandaops.io"
 }
 
 resource "cloudflare_record" "server_record_v4" {
- for_each = {
-   for vm in local.digitalocean_vms : "${vm.id}" => vm if contains(vm.name, "bootnode")
- }
- zone_id = data.cloudflare_zone.default.id
- name    = "${each.value.name}.${var.ethereum_network}"
- type    = "A"
- value   = digitalocean_droplet.main[each.value.id].ipv4_address
- proxied = false
- ttl     = 120
+  for_each = {
+    for vm in local.digitalocean_vms : "${vm.id}" => vm if contains(vm.name, "bootnode")
+  }
+  zone_id = data.cloudflare_zone.default.id
+  name    = "${each.value.name}.${var.ethereum_network}"
+  type    = "A"
+  value   = digitalocean_droplet.main[each.value.id].ipv4_address
+  proxied = false
+  ttl     = 120
 }
 #
 #resource "cloudflare_record" "server_record_v6" {
@@ -254,15 +254,15 @@ resource "cloudflare_record" "server_record_v4" {
 #}
 #
 resource "cloudflare_record" "server_record_rpc_v4" {
- for_each = {
-   for vm in local.digitalocean_vms : "${vm.id}" => vm if contains(vm.name, "bootnode")
- }
- zone_id = data.cloudflare_zone.default.id
- name    = "rpc.${each.value.name}.${var.ethereum_network}"
- type    = "A"
- value   = digitalocean_droplet.main[each.value.id].ipv4_address
- proxied = false
- ttl     = 120
+  for_each = {
+    for vm in local.digitalocean_vms : "${vm.id}" => vm if contains(vm.name, "bootnode")
+  }
+  zone_id = data.cloudflare_zone.default.id
+  name    = "rpc.${each.value.name}.${var.ethereum_network}"
+  type    = "A"
+  value   = digitalocean_droplet.main[each.value.id].ipv4_address
+  proxied = false
+  ttl     = 120
 }
 #
 #resource "cloudflare_record" "server_record_rpc_v6" {
@@ -278,15 +278,15 @@ resource "cloudflare_record" "server_record_rpc_v4" {
 #}
 #
 resource "cloudflare_record" "server_record_beacon_v4" {
- for_each = {
-   for vm in local.digitalocean_vms : "${vm.id}" => vm if contains(vm.name, "bootnode")
- }
- zone_id = data.cloudflare_zone.default.id
- name    = "bn.${each.value.name}.${var.ethereum_network}"
- type    = "A"
- value   = digitalocean_droplet.main[each.value.id].ipv4_address
- proxied = false
- ttl     = 120
+  for_each = {
+    for vm in local.digitalocean_vms : "${vm.id}" => vm if contains(vm.name, "bootnode")
+  }
+  zone_id = data.cloudflare_zone.default.id
+  name    = "bn.${each.value.name}.${var.ethereum_network}"
+  type    = "A"
+  value   = digitalocean_droplet.main[each.value.id].ipv4_address
+  proxied = false
+  ttl     = 120
 }
 #
 #resource "cloudflare_record" "server_record_beacon_v6" {
