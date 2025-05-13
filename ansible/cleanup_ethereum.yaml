@@ -73,17 +73,17 @@
             - /data/nimbusel
             # Consensus layer data
             - /data/lighthouse
-            - /data/lighthouse-validator
+#             - /data/lighthouse-validator
             - /data/lodestar
-            - /data/lodestar-validator
+#             - /data/lodestar-validator
             - /data/nimbus
-            - /data/nimbus-validator
+#             - /data/nimbus-validator
             - /data/prysm
-            - /data/prysm-validator
+#             - /data/prysm-validator
             - /data/teku
-            - /data/teku-validator
+#             - /data/teku-validator
             - /data/grandine
-            - /data/grandine-validator
+#             - /data/grandine-validator
             # Config files
             - /data/ethereum-network-config
             - /data/execution-auth.secret
