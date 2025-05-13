@@ -4,15 +4,15 @@ dora:
   fullnameOverride: dora
   image:
     repository: docker.ethquokkaops.io/dh/ethpandaops/dora
-    tag: pk910-basic-api-latest
+    tag: pk910-block-view
     pullPolicy: Always
   resources:
     requests:
       cpu: 500m
-      memory: 1Gi
+      memory: 4Gi
     limits:
       cpu: 1000m
-      memory: 2Gi
+      memory: 8Gi
   ingress:
     enabled: true
     className: ingress-nginx-public
