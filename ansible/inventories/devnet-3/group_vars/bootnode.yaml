@@ -42,6 +42,7 @@ prysm_container_command_extra_args:
   - --verbosity=debug
   - --delay-block-broadcast=2s
   - --use-rlnc
+  - --bootstrap-node=enr:-Mq4QFGfRvJmUFd99wVc6MCcvJmv86Meth1Hemlvzskqqy6OfPGU5ybyEuBPtp2A3UUV4bUkpEJDAug-kkiCDjyYb8KGAZbGlJrWh2F0dG5ldHOIAAAAAAMAAACEZXRoMpCnPOQUYIeTcT9CDwAAAAAAgmlkgnY0gmlwhEDjjgmEcXVpY4IyyIlzZWNwMjU2azGhAmf1gmEWd1WcpMHgnGqSlHMyp5lCOzqEgAzRyCUOklxZiHN5bmNuZXRzAIN0Y3CCIyiDdWRwgiMo
 # role: ethpandaops.general.geth
 geth_container_name: execution
 geth_container_image: "{{ default_ethereum_client_images.geth }}"
@@ -56,6 +57,7 @@ geth_container_command_extra_args:
   - --networkid={{ ethereum_network_id }}
   - --syncmode=full
   - --miner.gaslimit=60000000
+  - --bootnodes=enode://057650115d6515bf13926248848d06093ef66042a1cdf6832f0d4fab1c16b2a8ee31e704fcc8aada95d91682b53ddc435910a04137d4036af8c973e62eef904d@64.227.142.9:30303,enode://b0c7363b40dde84126d6e6f039dcfab2ffb920401a56eea083366a6aeb5db1a43611220bfc03f06c63dc631c9da4bce3a6f4ce39e4bb561b239644dbaf804a0a@167.172.147.108:30303,enode://52390181940a971e9f6f0c75c653e62dd72ba3b3e46575f7f907ad7c267551c663b92347ecc544b723076b3884f38c781c8015ae59fb969fc0f32cfe5d3f1cd0@134.122.103.58:30303,enode://f88e1f006834180bc3af3e579cb49c299058d3ecb3ae6d2cc93d9b4b462968256286389d176058503b85f45949418dfe7d362cedc8f6cf5b85baaaf7f11a1736@142.93.233.68:30303,enode://954f9857699dea774962410daeb7587bc6ad01dcee2c1ebf9418e8e63e0147c32449313615cffca9af13fc149c1cf26f329d0fca2f91d48ce017150ebbe61a0b@157.245.219.229:30303
 
 geth_init_custom_network: true
 geth_init_custom_network_genesis_file: "{{ eth_testnet_config_dir }}/genesis.json"
