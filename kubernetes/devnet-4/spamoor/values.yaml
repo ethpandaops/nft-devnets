@@ -1,0 +1,36 @@
+# Ansible managed. Don't change this file manually. Template info: /vendor/collections/ansible_collections/ethpandaops/general/roles/generate_kubernetes_config/templates/spamoor.yaml.j2
+
+spamoor:
+  fullnameOverride: spamoor
+  image:
+    repository: docker.ethquokkaops.io/dh/ethpandaops/spamoor
+    tag: latest
+    pullPolicy: Always
+  resources:
+    requests:
+      cpu: 250m
+      memory: 500Mi
+    limits:
+      cpu: 2000m
+      memory: 2Gi
+  ingress:
+    enabled: true
+    className: ingress-nginx-public
+    hosts:
+      - host: spamoor.nft-devnet-4.ethpandaops.io
+        paths:
+          - path: /
+            pathType: Prefix
+
+  persistence:
+    enabled: true
+
+  privateKey: "<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.spamoor_private_key}>"
+  rpcEndpoints:
+  # Rpc
+  - "http://geth-teku-001:8545"
+  - "https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.bootnode-1.nft-devnet-3.ethpandaops.io"
+  - "https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.bootnode-2.nft-devnet-3.ethpandaops.io"
+  - "https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.bootnode-3.nft-devnet-3.ethpandaops.io"
+  - "https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.bootnode-4.nft-devnet-3.ethpandaops.io"
+  - "https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.bootnode-5.nft-devnet-3.ethpandaops.io"
