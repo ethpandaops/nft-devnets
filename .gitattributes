@@ -3,3 +3,4 @@ network-configs/devnet-3/metadata/genesis.ssz filter=lfs diff=lfs merge=lfs -tex
 network-configs/devnet-4/metadata/genesis.ssz filter=lfs diff=lfs merge=lfs -text
 network-configs/devnet-5/metadata/genesis.ssz filter=lfs diff=lfs merge=lfs -text
 network-configs/devnet-6/metadata/genesis.ssz filter=lfs diff=lfs merge=lfs -text
+network-configs/devnet-7/metadata/genesis.ssz filter=lfs diff=lfs merge=lfs -text
