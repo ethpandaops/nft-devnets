@@ -23,6 +23,7 @@ xatu_sentry_config:
     overrideNetworkName: "{{ xatu_sentry_config_network_name_override }}"
     beaconSubscriptions:
     - block
+    - block_gossip
     - chain_reorg
     - finalized_checkpoint
     - head
@@ -53,6 +54,7 @@ xatu_sentry_config:
       - BEACON_API_ETH_V1_EVENTS_BLOB_SIDECAR
       - BEACON_API_ETH_V1_EVENTS_BLOCK
       - BEACON_API_ETH_V1_EVENTS_BLOCK_V2
+      - BEACON_API_ETH_V1_EVENTS_BLOCK_GOSSIP
       - BEACON_API_ETH_V1_EVENTS_CHAIN_REORG
       - BEACON_API_ETH_V1_EVENTS_CHAIN_REORG_V2
       - BEACON_API_ETH_V1_EVENTS_FINALIZED_CHECKPOINT
