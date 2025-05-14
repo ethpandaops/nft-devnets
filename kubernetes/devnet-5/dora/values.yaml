@@ -46,39 +46,39 @@ dora:
     fullnameOverride: "dora-postgresql"
 
   endpoints:
-
-  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.bootnode-1.nft-devnet-5.ethpandaops.io
-    name: bootnode-1
-    priority: -1
-  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.bootnode-2.nft-devnet-5.ethpandaops.io
-    name: bootnode-2
-    priority: -1
-  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.bootnode-3.nft-devnet-5.ethpandaops.io
-    name: bootnode-3
-    priority: -1
-  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.bootnode-4.nft-devnet-5.ethpandaops.io
-    name: bootnode-4
-    priority: -1
-  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.bootnode-5.nft-devnet-5.ethpandaops.io
-    name: bootnode-5
-    priority: -1
-  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.bootnode-1.nft-devnet-5.ethpandaops.io
-    name: bootnode-1
-    priority: -1
-    archive: false
-  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.bootnode-2.nft-devnet-5.ethpandaops.io
-    name: bootnode-2
-    priority: -1
-    archive: false
-  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.bootnode-3.nft-devnet-5.ethpandaops.io
-    name: bootnode-3
-    priority: -1
-    archive: false
-  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.bootnode-4.nft-devnet-5.ethpandaops.io
-    name: bootnode-4
-    priority: -1
-    archive: false
-  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.bootnode-5.nft-devnet-5.ethpandaops.io
-    name: bootnode-5
-    priority: -1
-    archive: false
+    - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.bootnode-1.nft-devnet-5.ethpandaops.io
+      name: bootnode-1
+      priority: -1
+    - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.bootnode-2.nft-devnet-5.ethpandaops.io
+      name: bootnode-2
+      priority: -1
+    - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.bootnode-3.nft-devnet-5.ethpandaops.io
+      name: bootnode-3
+      priority: -1
+    - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.bootnode-4.nft-devnet-5.ethpandaops.io
+      name: bootnode-4
+      priority: -1
+    - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.bootnode-5.nft-devnet-5.ethpandaops.io
+      name: bootnode-5
+      priority: -1
+  executionEndpoints:
+    - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.bootnode-1.nft-devnet-5.ethpandaops.io
+      name: bootnode-1
+      priority: -1
+      archive: false
+    - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.bootnode-2.nft-devnet-5.ethpandaops.io
+      name: bootnode-2
+      priority: -1
+      archive: false
+    - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.bootnode-3.nft-devnet-5.ethpandaops.io
+      name: bootnode-3
+      priority: -1
+      archive: false
+    - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.bootnode-4.nft-devnet-5.ethpandaops.io
+      name: bootnode-4
+      priority: -1
+      archive: false
+    - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.bootnode-5.nft-devnet-5.ethpandaops.io
+      name: bootnode-5
+      priority: -1
+      archive: false
