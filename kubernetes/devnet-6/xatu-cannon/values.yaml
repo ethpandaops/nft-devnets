@@ -17,7 +17,7 @@ xatu-cannon:
     logging: "info"
     metricsAddr: ":9090"
     pprofAddr: ":6060"
-    name: "nft-devnet-5-xatu-cannon"
+    name: "nft-devnet-6-xatu-cannon"
     derivers:
       attesterSlashing:
         enabled: true
@@ -93,8 +93,8 @@ xatu-cannon:
     tracing:
       enabled: false
     ethereum:
-      beaconNodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.bootnode-1.nft-devnet-5.ethpandaops.io
-      overrideNetworkName: nft-devnet-5
+      beaconNodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.bootnode-1.nft-devnet-6.ethpandaops.io
+      overrideNetworkName: nft-devnet-6
       beaconNodeHeaders: {}
       blockCacheSize: 300
       blockCacheTtl: 1h

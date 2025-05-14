@@ -1,0 +1,85 @@
+# Ansible managed. Don't change this file manually. Template info: /vendor/collections/ansible_collections/ethpandaops/general/roles/generate_kubernetes_config/templates/dora.yaml.j2
+
+dora:
+  fullnameOverride: dora
+  image:
+    repository: docker.ethquokkaops.io/dh/ethpandaops/dora
+    tag: master-61d8345
+    pullPolicy: IfNotPresent
+  resources:
+    requests:
+      cpu: 500m
+      memory: 1Gi
+    limits:
+      cpu: 1000m
+      memory: 2Gi
+  ingress:
+    enabled: true
+    className: ingress-nginx-public
+    hosts:
+      - host: dora.nft-devnet-6.ethpandaops.io
+        paths:
+          - path: /
+            pathType: Prefix
+
+  name: nft-devnet-6
+  configPath: "https://config.nft-devnet-6.ethpandaops.io/cl/config.yaml"
+  validatorNamesInventory: "https://config.nft-devnet-6.ethpandaops.io/api/v1/nodes/validator-ranges"
+  proxyCount: 2
+  extraEnv:
+    - name: FRONTEND_PPROF
+      value: "true"
+    - name: FRONTEND_SHOW_SENSITIVE_PEER_INFOS
+      value: "true"
+    - name: FRONTEND_ETH_EXPLORER_LINK
+      value: "https://explorer.nft-devnet-6.ethpandaops.io"
+    - name: FRONTEND_PUBLIC_RPC_URL
+      value: "https://rpc.nft-devnet-6.ethpandaops.io"
+    - name: FRONTEND_RAINBOWKIT_PROJECT_ID
+      value: "15fe4ab4d5c0bcb6f0dc7c398301ff0e"
+    - name: FRONTEND_SHOW_SUBMIT_DEPOSIT
+      value: "true"
+    - name: FRONTEND_SHOW_SUBMIT_EL_REQUESTS
+      value: "true"
+  postgresql:
+    name: "dora-postgresql"
+    fullnameOverride: "dora-postgresql"
+
+  endpoints:
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.bootnode-1.nft-devnet-6.ethpandaops.io
+    name: bootnode-1
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.bootnode-2.nft-devnet-6.ethpandaops.io
+    name: bootnode-2
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.bootnode-3.nft-devnet-6.ethpandaops.io
+    name: bootnode-3
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.bootnode-4.nft-devnet-6.ethpandaops.io
+    name: bootnode-4
+    priority: -1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn.bootnode-5.nft-devnet-6.ethpandaops.io
+    name: bootnode-5
+    priority: -1
+
+  executionEndpoints:
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.bootnode-1.nft-devnet-6.ethpandaops.io
+    name: bootnode-1
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.bootnode-2.nft-devnet-6.ethpandaops.io
+    name: bootnode-2
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.bootnode-3.nft-devnet-6.ethpandaops.io
+    name: bootnode-3
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.bootnode-4.nft-devnet-6.ethpandaops.io
+    name: bootnode-4
+    priority: -1
+    archive: false
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc.bootnode-5.nft-devnet-6.ethpandaops.io
+    name: bootnode-5
+    priority: -1
+    archive: false
