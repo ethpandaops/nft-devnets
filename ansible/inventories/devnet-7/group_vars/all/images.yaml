@@ -1,7 +1,7 @@
 default_ethereum_client_images:
 ### Consensus layer clients
-  prysm: gcr.io/prylabs-dev/prysm/beacon-chain:rlnc
-  prysm_validator: gcr.io/prylabs-dev/prysm/validator:rlnc
+  prysm: gcr.io/prylabs-dev/prysm/beacon-chain:rlnc-1a34c9d
+  prysm_validator: gcr.io/prylabs-dev/prysm/validator:rlnc-1a34c9d
 ### Execution layer clients
   geth: docker.ethquokkaops.io/dh/ethereum/client-go:v1.15.11
 

@@ -42,7 +42,8 @@ prysm_container_command_extra_args:
   - --verbosity=debug
   - --delay-block-broadcast=2s
   - --use-rlnc
-  - --rlnc-block-chunks=40
+  - --rlnc-block-chunks=20
+  - --p2p-max-peers=120
 # role: ethpandaops.general.geth
 geth_container_name: execution
 geth_container_image: "{{ default_ethereum_client_images.geth }}"
