@@ -2,18 +2,18 @@ default_ethereum_client_images:
 ### Consensus layer clients
   lighthouse: sigp/lighthouse:v7.1.0
   lodestar: chainsafe/lodestar:v1.33.0
-  nimbus: statusim/nimbus-eth2:v25.7.1
-  prysm: gcr.io/prysmaticlabs/prysm/beacon-chain:v6.0.4
-  prysm_validator: gcr.io/prysmaticlabs/prysm/validator:v6.0.4
+  nimbus: statusim/nimbus-eth2:amd64-v25.7.0
+  prysm: gcr.io/prysmaticlabs/prysm/beacon-chain:stable
+  prysm_validator: gcr.io/prysmaticlabs/prysm/validator:stable
   teku: consensys/teku:25.7.1
   grandine: sifrai/grandine:1.1.4
 ### Execution layer clients
   besu: hyperledger/besu:25.7.0
   geth: ethereum/client-go:v1.16.2
-  erigon: thorax/erigon:v3.0.15
-  nethermind: nethermind/nethermind:1.32.4
+  erigon: erigontech/erigon:v3.0.15
+  nethermind: ethpandaops/nethermind:master
   reth: ghcr.io/paradigmxyz/reth:v1.6.0
-  nimbusel: docker.ethquokkaops.io/dh/ethpandaops/nimbus-eth1:fusaka-devnet-3
+  nimbusel: ethpandaops/nimbus-eth1:master
 
 # mev boost
   mev_boost: docker.ethquokkaops.io/dh/ethpandaops/mev-boost:bharath-123-fusaka-devnet-3

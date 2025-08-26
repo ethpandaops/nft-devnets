@@ -47,3 +47,4 @@ grandine_validator_container_volumes:
   - "{{ grandine_validator_datadir }}:/validator-data"
   - "{{ eth_testnet_config_dir }}:/network-config:ro"
 grandine_validator_datadir: /data/grandine-validator
+ethereum_node_ipv6_enabled: false
