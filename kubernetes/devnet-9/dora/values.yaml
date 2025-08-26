@@ -1,0 +1,765 @@
+# Ansible managed. Don't change this file manually. Template info: /vendor/collections/ansible_collections/ethpandaops/general/roles/generate_kubernetes_config/templates/dora.yaml.j2
+
+dora:
+  fullnameOverride: dora
+  image:
+    repository: docker.ethquokkaops.io/dh/ethpandaops/dora
+    tag: master-latest
+    pullPolicy: Always
+  resources:
+    requests:
+      cpu: 500m
+      memory: 1Gi
+    limits:
+      cpu: 1000m
+      memory: 2Gi
+  ingress:
+    enabled: true
+    className: ingress-nginx-public
+    hosts:
+      - host: dora.nft-devnet-9.ethpandaops.io
+        paths:
+          - path: /
+            pathType: Prefix
+
+  name: nft-devnet-9
+  configPath: "https://config.nft-devnet-9.ethpandaops.io/cl/config.yaml"
+  validatorNamesInventory: "https://config.nft-devnet-9.ethpandaops.io/api/v1/nodes/validator-ranges"
+  proxyCount: 2
+  extraEnv:
+    - name: FRONTEND_PPROF
+      value: "true"
+    - name: FRONTEND_SHOW_SENSITIVE_PEER_INFOS
+      value: "true"
+    - name: API_ENABLED
+      value: "true"
+    - name: API_CORS_ORIGINS
+      value: "*"
+    - name: FRONTEND_ETH_EXPLORER_LINK
+      value: "https://explorer.nft-devnet-9.ethpandaops.io"
+    - name: FRONTEND_PUBLIC_RPC_URL
+      value: "https://rpc.nft-devnet-9.ethpandaops.io"
+    - name: FRONTEND_SHOW_SUBMIT_DEPOSIT
+      value: "true"
+    - name: FRONTEND_SHOW_SUBMIT_EL_REQUESTS
+      value: "true"
+  postgresql:
+    name: "dora-postgresql"
+    fullnameOverride: "dora-postgresql"
+
+  mevRelays:
+    - index: 0
+      name: "Flashbots"
+      url: "http://mev-relay-1.nft-devnet-9.ethpandaops.io:9062/"
+
+  authGroups:
+    pandaops:
+      credentials:
+        username: ""
+        password: "<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>"
+
+  endpoints:
+  # Rpc
+  - url: http://prysm-geth-001:5052
+    name: rpc-prysm-geth-001
+    authGroup: pandaops
+    archive: true
+    priority: 1
+  - url: https://bn-bootnode-1.srv.nft-devnet-9.ethpandaops.io
+    name: bootnode-1
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-grandine-besu-1.srv.nft-devnet-9.ethpandaops.io
+    name: grandine-besu-1
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-grandine-besu-2.srv.nft-devnet-9.ethpandaops.io
+    name: grandine-besu-2
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-grandine-erigon-1.srv.nft-devnet-9.ethpandaops.io
+    name: grandine-erigon-1
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-grandine-erigon-2.srv.nft-devnet-9.ethpandaops.io
+    name: grandine-erigon-2
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-grandine-geth-1.srv.nft-devnet-9.ethpandaops.io
+    name: grandine-geth-1
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-grandine-geth-2.srv.nft-devnet-9.ethpandaops.io
+    name: grandine-geth-2
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-grandine-nethermind-1.srv.nft-devnet-9.ethpandaops.io
+    name: grandine-nethermind-1
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-grandine-nethermind-2.srv.nft-devnet-9.ethpandaops.io
+    name: grandine-nethermind-2
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-grandine-nimbusel-1.srv.nft-devnet-9.ethpandaops.io
+    name: grandine-nimbusel-1
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-grandine-reth-1.srv.nft-devnet-9.ethpandaops.io
+    name: grandine-reth-1
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-grandine-reth-2.srv.nft-devnet-9.ethpandaops.io
+    name: grandine-reth-2
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-lighthouse-besu-1.srv.nft-devnet-9.ethpandaops.io
+    name: lighthouse-besu-1
+    authGroup: pandaops
+    priority: -1
+    archive: true
+  - url: https://bn-lighthouse-besu-2.srv.nft-devnet-9.ethpandaops.io
+    name: lighthouse-besu-2
+    authGroup: pandaops
+    priority: -1
+    archive: true
+  - url: https://bn-lighthouse-erigon-1.srv.nft-devnet-9.ethpandaops.io
+    name: lighthouse-erigon-1
+    authGroup: pandaops
+    priority: -1
+    archive: true
+  - url: https://bn-lighthouse-erigon-2.srv.nft-devnet-9.ethpandaops.io
+    name: lighthouse-erigon-2
+    authGroup: pandaops
+    priority: -1
+    archive: true
+  - url: https://bn-lighthouse-geth-1.srv.nft-devnet-9.ethpandaops.io
+    name: lighthouse-geth-1
+    authGroup: pandaops
+    priority: -1
+    archive: true
+  - url: https://bn-lighthouse-geth-2.srv.nft-devnet-9.ethpandaops.io
+    name: lighthouse-geth-2
+    authGroup: pandaops
+    priority: -1
+    archive: true
+  - url: https://bn-lighthouse-nethermind-1.srv.nft-devnet-9.ethpandaops.io
+    name: lighthouse-nethermind-1
+    authGroup: pandaops
+    priority: -1
+    archive: true
+  - url: https://bn-lighthouse-nethermind-2.srv.nft-devnet-9.ethpandaops.io
+    name: lighthouse-nethermind-2
+    authGroup: pandaops
+    priority: -1
+    archive: true
+  - url: https://bn-lighthouse-nimbusel-1.srv.nft-devnet-9.ethpandaops.io
+    name: lighthouse-nimbusel-1
+    authGroup: pandaops
+    priority: -1
+    archive: true
+  - url: https://bn-lighthouse-reth-1.srv.nft-devnet-9.ethpandaops.io
+    name: lighthouse-reth-1
+    authGroup: pandaops
+    priority: -1
+    archive: true
+  - url: https://bn-lighthouse-reth-2.srv.nft-devnet-9.ethpandaops.io
+    name: lighthouse-reth-2
+    authGroup: pandaops
+    priority: -1
+    archive: true
+  - url: https://bn-lodestar-besu-1.srv.nft-devnet-9.ethpandaops.io
+    name: lodestar-besu-1
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-lodestar-besu-2.srv.nft-devnet-9.ethpandaops.io
+    name: lodestar-besu-2
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-lodestar-erigon-1.srv.nft-devnet-9.ethpandaops.io
+    name: lodestar-erigon-1
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-lodestar-erigon-2.srv.nft-devnet-9.ethpandaops.io
+    name: lodestar-erigon-2
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-lodestar-geth-1.srv.nft-devnet-9.ethpandaops.io
+    name: lodestar-geth-1
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-lodestar-geth-2.srv.nft-devnet-9.ethpandaops.io
+    name: lodestar-geth-2
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-lodestar-nethermind-1.srv.nft-devnet-9.ethpandaops.io
+    name: lodestar-nethermind-1
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-lodestar-nethermind-2.srv.nft-devnet-9.ethpandaops.io
+    name: lodestar-nethermind-2
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-lodestar-nimbusel-1.srv.nft-devnet-9.ethpandaops.io
+    name: lodestar-nimbusel-1
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-lodestar-reth-1.srv.nft-devnet-9.ethpandaops.io
+    name: lodestar-reth-1
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-lodestar-reth-2.srv.nft-devnet-9.ethpandaops.io
+    name: lodestar-reth-2
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-mev-relay-1.srv.nft-devnet-9.ethpandaops.io
+    name: mev-relay-1
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-nimbus-besu-1.srv.nft-devnet-9.ethpandaops.io
+    name: nimbus-besu-1
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-nimbus-besu-2.srv.nft-devnet-9.ethpandaops.io
+    name: nimbus-besu-2
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-nimbus-erigon-1.srv.nft-devnet-9.ethpandaops.io
+    name: nimbus-erigon-1
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-nimbus-erigon-2.srv.nft-devnet-9.ethpandaops.io
+    name: nimbus-erigon-2
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-nimbus-geth-1.srv.nft-devnet-9.ethpandaops.io
+    name: nimbus-geth-1
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-nimbus-geth-2.srv.nft-devnet-9.ethpandaops.io
+    name: nimbus-geth-2
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-nimbus-nethermind-1.srv.nft-devnet-9.ethpandaops.io
+    name: nimbus-nethermind-1
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-nimbus-nethermind-2.srv.nft-devnet-9.ethpandaops.io
+    name: nimbus-nethermind-2
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-nimbus-nimbusel-1.srv.nft-devnet-9.ethpandaops.io
+    name: nimbus-nimbusel-1
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-nimbus-reth-1.srv.nft-devnet-9.ethpandaops.io
+    name: nimbus-reth-1
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-nimbus-reth-2.srv.nft-devnet-9.ethpandaops.io
+    name: nimbus-reth-2
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-prysm-besu-1.srv.nft-devnet-9.ethpandaops.io
+    name: prysm-besu-1
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-prysm-besu-2.srv.nft-devnet-9.ethpandaops.io
+    name: prysm-besu-2
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-prysm-erigon-1.srv.nft-devnet-9.ethpandaops.io
+    name: prysm-erigon-1
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-prysm-erigon-2.srv.nft-devnet-9.ethpandaops.io
+    name: prysm-erigon-2
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-prysm-geth-1.srv.nft-devnet-9.ethpandaops.io
+    name: prysm-geth-1
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-prysm-geth-2.srv.nft-devnet-9.ethpandaops.io
+    name: prysm-geth-2
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-prysm-nethermind-1.srv.nft-devnet-9.ethpandaops.io
+    name: prysm-nethermind-1
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-prysm-nethermind-2.srv.nft-devnet-9.ethpandaops.io
+    name: prysm-nethermind-2
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-prysm-nimbusel-1.srv.nft-devnet-9.ethpandaops.io
+    name: prysm-nimbusel-1
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-prysm-reth-1.srv.nft-devnet-9.ethpandaops.io
+    name: prysm-reth-1
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-prysm-reth-2.srv.nft-devnet-9.ethpandaops.io
+    name: prysm-reth-2
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-teku-besu-1.srv.nft-devnet-9.ethpandaops.io
+    name: teku-besu-1
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-teku-besu-2.srv.nft-devnet-9.ethpandaops.io
+    name: teku-besu-2
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-teku-erigon-1.srv.nft-devnet-9.ethpandaops.io
+    name: teku-erigon-1
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-teku-erigon-2.srv.nft-devnet-9.ethpandaops.io
+    name: teku-erigon-2
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-teku-geth-1.srv.nft-devnet-9.ethpandaops.io
+    name: teku-geth-1
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-teku-geth-2.srv.nft-devnet-9.ethpandaops.io
+    name: teku-geth-2
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-teku-nethermind-1.srv.nft-devnet-9.ethpandaops.io
+    name: teku-nethermind-1
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-teku-nethermind-2.srv.nft-devnet-9.ethpandaops.io
+    name: teku-nethermind-2
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-teku-nimbusel-1.srv.nft-devnet-9.ethpandaops.io
+    name: teku-nimbusel-1
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-teku-reth-1.srv.nft-devnet-9.ethpandaops.io
+    name: teku-reth-1
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-teku-reth-2.srv.nft-devnet-9.ethpandaops.io
+    name: teku-reth-2
+    authGroup: pandaops
+    priority: -1
+  executionEndpoints:
+  # Rpc
+  - url: http://geth-prysm-001:8545
+    name: rpc-prysm-geth-001
+    authGroup: pandaops
+    archive: true
+    priority: 1
+  - url: https://rpc-bootnode-1.srv.nft-devnet-9.ethpandaops.io
+    name: bootnode-1
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-bootnode-1.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-grandine-besu-1.srv.nft-devnet-9.ethpandaops.io
+    name: grandine-besu-1
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-grandine-besu-1.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-grandine-besu-2.srv.nft-devnet-9.ethpandaops.io
+    name: grandine-besu-2
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-grandine-besu-2.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-grandine-erigon-1.srv.nft-devnet-9.ethpandaops.io
+    name: grandine-erigon-1
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-grandine-erigon-1.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-grandine-erigon-2.srv.nft-devnet-9.ethpandaops.io
+    name: grandine-erigon-2
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-grandine-erigon-2.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-grandine-geth-1.srv.nft-devnet-9.ethpandaops.io
+    name: grandine-geth-1
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-grandine-geth-1.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-grandine-geth-2.srv.nft-devnet-9.ethpandaops.io
+    name: grandine-geth-2
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-grandine-geth-2.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-grandine-nethermind-1.srv.nft-devnet-9.ethpandaops.io
+    name: grandine-nethermind-1
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-grandine-nethermind-1.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-grandine-nethermind-2.srv.nft-devnet-9.ethpandaops.io
+    name: grandine-nethermind-2
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-grandine-nethermind-2.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-grandine-nimbusel-1.srv.nft-devnet-9.ethpandaops.io
+    name: grandine-nimbusel-1
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-grandine-nimbusel-1.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-grandine-reth-1.srv.nft-devnet-9.ethpandaops.io
+    name: grandine-reth-1
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-grandine-reth-1.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-grandine-reth-2.srv.nft-devnet-9.ethpandaops.io
+    name: grandine-reth-2
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-grandine-reth-2.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-lighthouse-besu-1.srv.nft-devnet-9.ethpandaops.io
+    name: lighthouse-besu-1
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-lighthouse-besu-1.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-lighthouse-besu-2.srv.nft-devnet-9.ethpandaops.io
+    name: lighthouse-besu-2
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-lighthouse-besu-2.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-lighthouse-erigon-1.srv.nft-devnet-9.ethpandaops.io
+    name: lighthouse-erigon-1
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-lighthouse-erigon-1.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-lighthouse-erigon-2.srv.nft-devnet-9.ethpandaops.io
+    name: lighthouse-erigon-2
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-lighthouse-erigon-2.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-lighthouse-geth-1.srv.nft-devnet-9.ethpandaops.io
+    name: lighthouse-geth-1
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-lighthouse-geth-1.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-lighthouse-geth-2.srv.nft-devnet-9.ethpandaops.io
+    name: lighthouse-geth-2
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-lighthouse-geth-2.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-lighthouse-nethermind-1.srv.nft-devnet-9.ethpandaops.io
+    name: lighthouse-nethermind-1
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-lighthouse-nethermind-1.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-lighthouse-nethermind-2.srv.nft-devnet-9.ethpandaops.io
+    name: lighthouse-nethermind-2
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-lighthouse-nethermind-2.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-lighthouse-nimbusel-1.srv.nft-devnet-9.ethpandaops.io
+    name: lighthouse-nimbusel-1
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-lighthouse-nimbusel-1.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-lighthouse-reth-1.srv.nft-devnet-9.ethpandaops.io
+    name: lighthouse-reth-1
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-lighthouse-reth-1.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-lighthouse-reth-2.srv.nft-devnet-9.ethpandaops.io
+    name: lighthouse-reth-2
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-lighthouse-reth-2.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-lodestar-besu-1.srv.nft-devnet-9.ethpandaops.io
+    name: lodestar-besu-1
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-lodestar-besu-1.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-lodestar-besu-2.srv.nft-devnet-9.ethpandaops.io
+    name: lodestar-besu-2
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-lodestar-besu-2.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-lodestar-erigon-1.srv.nft-devnet-9.ethpandaops.io
+    name: lodestar-erigon-1
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-lodestar-erigon-1.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-lodestar-erigon-2.srv.nft-devnet-9.ethpandaops.io
+    name: lodestar-erigon-2
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-lodestar-erigon-2.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-lodestar-geth-1.srv.nft-devnet-9.ethpandaops.io
+    name: lodestar-geth-1
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-lodestar-geth-1.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-lodestar-geth-2.srv.nft-devnet-9.ethpandaops.io
+    name: lodestar-geth-2
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-lodestar-geth-2.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-lodestar-nethermind-1.srv.nft-devnet-9.ethpandaops.io
+    name: lodestar-nethermind-1
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-lodestar-nethermind-1.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-lodestar-nethermind-2.srv.nft-devnet-9.ethpandaops.io
+    name: lodestar-nethermind-2
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-lodestar-nethermind-2.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-lodestar-nimbusel-1.srv.nft-devnet-9.ethpandaops.io
+    name: lodestar-nimbusel-1
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-lodestar-nimbusel-1.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-lodestar-reth-1.srv.nft-devnet-9.ethpandaops.io
+    name: lodestar-reth-1
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-lodestar-reth-1.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-lodestar-reth-2.srv.nft-devnet-9.ethpandaops.io
+    name: lodestar-reth-2
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-lodestar-reth-2.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-mev-relay-1.srv.nft-devnet-9.ethpandaops.io
+    name: mev-relay-1
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-mev-relay-1.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-nimbus-besu-1.srv.nft-devnet-9.ethpandaops.io
+    name: nimbus-besu-1
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-nimbus-besu-1.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-nimbus-besu-2.srv.nft-devnet-9.ethpandaops.io
+    name: nimbus-besu-2
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-nimbus-besu-2.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-nimbus-erigon-1.srv.nft-devnet-9.ethpandaops.io
+    name: nimbus-erigon-1
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-nimbus-erigon-1.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-nimbus-erigon-2.srv.nft-devnet-9.ethpandaops.io
+    name: nimbus-erigon-2
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-nimbus-erigon-2.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-nimbus-geth-1.srv.nft-devnet-9.ethpandaops.io
+    name: nimbus-geth-1
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-nimbus-geth-1.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-nimbus-geth-2.srv.nft-devnet-9.ethpandaops.io
+    name: nimbus-geth-2
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-nimbus-geth-2.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-nimbus-nethermind-1.srv.nft-devnet-9.ethpandaops.io
+    name: nimbus-nethermind-1
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-nimbus-nethermind-1.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-nimbus-nethermind-2.srv.nft-devnet-9.ethpandaops.io
+    name: nimbus-nethermind-2
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-nimbus-nethermind-2.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-nimbus-nimbusel-1.srv.nft-devnet-9.ethpandaops.io
+    name: nimbus-nimbusel-1
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-nimbus-nimbusel-1.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-nimbus-reth-1.srv.nft-devnet-9.ethpandaops.io
+    name: nimbus-reth-1
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-nimbus-reth-1.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-nimbus-reth-2.srv.nft-devnet-9.ethpandaops.io
+    name: nimbus-reth-2
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-nimbus-reth-2.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-prysm-besu-1.srv.nft-devnet-9.ethpandaops.io
+    name: prysm-besu-1
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-prysm-besu-1.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-prysm-besu-2.srv.nft-devnet-9.ethpandaops.io
+    name: prysm-besu-2
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-prysm-besu-2.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-prysm-erigon-1.srv.nft-devnet-9.ethpandaops.io
+    name: prysm-erigon-1
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-prysm-erigon-1.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-prysm-erigon-2.srv.nft-devnet-9.ethpandaops.io
+    name: prysm-erigon-2
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-prysm-erigon-2.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-prysm-geth-1.srv.nft-devnet-9.ethpandaops.io
+    name: prysm-geth-1
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-prysm-geth-1.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-prysm-geth-2.srv.nft-devnet-9.ethpandaops.io
+    name: prysm-geth-2
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-prysm-geth-2.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-prysm-nethermind-1.srv.nft-devnet-9.ethpandaops.io
+    name: prysm-nethermind-1
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-prysm-nethermind-1.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-prysm-nethermind-2.srv.nft-devnet-9.ethpandaops.io
+    name: prysm-nethermind-2
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-prysm-nethermind-2.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-prysm-nimbusel-1.srv.nft-devnet-9.ethpandaops.io
+    name: prysm-nimbusel-1
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-prysm-nimbusel-1.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-prysm-reth-1.srv.nft-devnet-9.ethpandaops.io
+    name: prysm-reth-1
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-prysm-reth-1.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-prysm-reth-2.srv.nft-devnet-9.ethpandaops.io
+    name: prysm-reth-2
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-prysm-reth-2.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-teku-besu-1.srv.nft-devnet-9.ethpandaops.io
+    name: teku-besu-1
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-teku-besu-1.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-teku-besu-2.srv.nft-devnet-9.ethpandaops.io
+    name: teku-besu-2
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-teku-besu-2.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-teku-erigon-1.srv.nft-devnet-9.ethpandaops.io
+    name: teku-erigon-1
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-teku-erigon-1.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-teku-erigon-2.srv.nft-devnet-9.ethpandaops.io
+    name: teku-erigon-2
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-teku-erigon-2.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-teku-geth-1.srv.nft-devnet-9.ethpandaops.io
+    name: teku-geth-1
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-teku-geth-1.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-teku-geth-2.srv.nft-devnet-9.ethpandaops.io
+    name: teku-geth-2
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-teku-geth-2.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-teku-nethermind-1.srv.nft-devnet-9.ethpandaops.io
+    name: teku-nethermind-1
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-teku-nethermind-1.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-teku-nethermind-2.srv.nft-devnet-9.ethpandaops.io
+    name: teku-nethermind-2
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-teku-nethermind-2.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-teku-nimbusel-1.srv.nft-devnet-9.ethpandaops.io
+    name: teku-nimbusel-1
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-teku-nimbusel-1.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-teku-reth-1.srv.nft-devnet-9.ethpandaops.io
+    name: teku-reth-1
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-teku-reth-1.srv.nft-devnet-9.ethpandaops.io:8961
+  - url: https://rpc-teku-reth-2.srv.nft-devnet-9.ethpandaops.io
+    name: teku-reth-2
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-teku-reth-2.srv.nft-devnet-9.ethpandaops.io:8961

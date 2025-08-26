@@ -58,6 +58,12 @@
             - "mev-boost"
             - "external-block-builder"
             - "xatu-sentry"
+            - "mev-relay-api"
+            - "mev-relay-housekeeper"
+            - "mev-relay-website"
+            - "mev-relay-redis"
+            - "mev-relay-database"
+
         - name: Remove data dirs
           file:
             state: absent
@@ -73,19 +79,21 @@
             - /data/nimbusel
             # Consensus layer data
             - /data/lighthouse
-#             - /data/lighthouse-validator
+            - /data/lighthouse-validator
             - /data/lodestar
-#             - /data/lodestar-validator
+            - /data/lodestar-validator
             - /data/nimbus
-#             - /data/nimbus-validator
+            - /data/nimbus-validator
             - /data/prysm
-#             - /data/prysm-validator
+            - /data/prysm-validator
             - /data/teku
-#             - /data/teku-validator
+            - /data/teku-validator
             - /data/grandine
-#             - /data/grandine-validator
+            - /data/grandine-validator
             # Config files
             - /data/ethereum-network-config
             - /data/execution-auth.secret
             - /data/cl-bootnode
             - /data/xatu-sentry
+            # MEV
+            - /data/mev_relay
