@@ -63,5 +63,3 @@ dugtrio:
     name: lighthouse-reth-1
   - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn-lighthouse-reth-2.srv.nft-devnet-10.ethpandaops.io
     name: lighthouse-reth-2
-  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn-lodestar-geth-1.srv.nft-devnet-10.ethpandaops.io
-    name: lodestar-geth-1

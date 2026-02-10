@@ -144,10 +144,6 @@ dora:
     authGroup: pandaops
     priority: -1
     archive: true
-  - url: https://bn-lodestar-geth-1.srv.nft-devnet-10.ethpandaops.io
-    name: lodestar-geth-1
-    authGroup: pandaops
-    priority: -1
   executionEndpoints:
   # Rpc
   - url: http://geth-prysm-001:8545
@@ -233,9 +229,3 @@ dora:
     priority: -1
     archive: false
     engineSnooperUrl: http://rpc-lighthouse-reth-2.srv.nft-devnet-10.ethpandaops.io:8961
-  - url: https://rpc-lodestar-geth-1.srv.nft-devnet-10.ethpandaops.io
-    name: lodestar-geth-1
-    authGroup: pandaops
-    priority: -1
-    archive: false
-    engineSnooperUrl: http://rpc-lodestar-geth-1.srv.nft-devnet-10.ethpandaops.io:8961

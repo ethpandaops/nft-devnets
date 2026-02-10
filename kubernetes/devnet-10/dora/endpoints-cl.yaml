@@ -70,8 +70,4 @@
   authGroup: pandaops
   priority: -1
   archive: true
-- url: https://bn-lodestar-geth-1.srv.nft-devnet-10.ethpandaops.io
-  name: lodestar-geth-1
-  authGroup: pandaops
-  priority: -1
 

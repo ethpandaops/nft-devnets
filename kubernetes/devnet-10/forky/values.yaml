@@ -112,8 +112,3 @@ forky:
           config:
             address: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn-lighthouse-reth-1.srv.nft-devnet-10.ethpandaops.io
             polling_interval: "12s"
-        - name: lodestar-geth-1
-          type: "beacon_node"
-          config:
-            address: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn-lodestar-geth-1.srv.nft-devnet-10.ethpandaops.io
-            polling_interval: "12s"

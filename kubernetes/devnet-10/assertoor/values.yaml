@@ -85,9 +85,6 @@ assertoor:
     - name:  lighthouse-reth-2
       executionUrl: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc-lighthouse-reth-2.srv.nft-devnet-10.ethpandaops.io
       consensusUrl: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn-lighthouse-reth-2.srv.nft-devnet-10.ethpandaops.io
-    - name:  lodestar-geth-1
-      executionUrl: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@rpc-lodestar-geth-1.srv.nft-devnet-10.ethpandaops.io
-      consensusUrl: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>@bn-lodestar-geth-1.srv.nft-devnet-10.ethpandaops.io
 
   validatorNamesInventory: https://config.nft-devnet-10.ethpandaops.io/api/v1/nodes/validator-ranges
   globalVariables:
@@ -106,7 +103,6 @@ assertoor:
       - lighthouse-nimbusel-2
       - lighthouse-reth-1
       - lighthouse-reth-2
-      - lodestar-geth-1
     validatorPairNames:
       - lighthouse-besu-1
       - lighthouse-besu-2

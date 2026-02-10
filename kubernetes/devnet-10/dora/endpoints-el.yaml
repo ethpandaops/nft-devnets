@@ -84,9 +84,3 @@
   priority: -1
   archive: false
   engineSnooperUrl: http://rpc-lighthouse-reth-2.srv.nft-devnet-10.ethpandaops.io:8961
-- url: https://rpc-lodestar-geth-1.srv.nft-devnet-10.ethpandaops.io
-  name: lodestar-geth-1
-  authGroup: pandaops
-  priority: -1
-  archive: false
-  engineSnooperUrl: http://rpc-lodestar-geth-1.srv.nft-devnet-10.ethpandaops.io:8961
