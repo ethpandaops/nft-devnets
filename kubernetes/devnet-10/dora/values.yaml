@@ -1,0 +1,241 @@
+# Ansible managed. Don't change this file manually. Template info: /vendor/collections/ansible_collections/ethpandaops/general/roles/generate_kubernetes_config/templates/dora.yaml.j2
+
+dora:
+  fullnameOverride: dora
+  image:
+    repository: ethpandaops/dora
+    tag: master-latest
+    pullPolicy: Always
+  resources:
+    requests:
+      cpu: 500m
+      memory: 1Gi
+    limits:
+      cpu: 1500m
+      memory: 3Gi
+  ingress:
+    enabled: true
+    className: ingress-nginx-public
+    annotations:
+      nginx.ingress.kubernetes.io/proxy-body-size: "0"
+      nginx.ingress.kubernetes.io/configuration-snippet: |
+        sub_filter '</head>' '<script src="https://pandamenu.ethpandaops.io/panda-menu-1.0.0.js" integrity="sha384-j6D+DanVUQs7XYmJaMXGwg2VdBq07F/ekc+bP5CNPsLOYCv4TKf8r3JBWqxwakKL" crossorigin="anonymous"></script></head>';
+        sub_filter_types text/html;
+        sub_filter_once off;
+    hosts:
+      - host: dora.nft-devnet-10.ethpandaops.io
+        paths:
+          - path: /
+            pathType: Prefix
+
+  name: nft-devnet-10
+  configPath: "https://config.nft-devnet-10.ethpandaops.io/cl/config.yaml"
+  validatorNamesInventory: "https://config.nft-devnet-10.ethpandaops.io/api/v1/nodes/validator-ranges"
+  ethExplorerLink: "https://explorer.nft-devnet-10.ethpandaops.io"
+  publicRpcUrl: "https://rpc.nft-devnet-10.ethpandaops.io"
+  rainbowkitProjectId: ""
+  executionGenesisConfig: "https://config.nft-devnet-10.ethpandaops.io/el/genesis.json"
+  apiRequireAuth: False
+  apiAuthSecret: "<path:/secrets/services/services.enc.yaml#dora | jsonPath {.api_secret}>"
+  apiWhitelistedIPs: []
+  apiDefaultRateLimit: 60
+  apiDisableDefaultRateLimit: false
+  proxyCount: 2
+  executionIndexerEnabled: True
+  executionIndexerRetention: 336h
+  tracoorUrl: "https://tracoor.nft-devnet-10.ethpandaops.io"
+  tracoorNetwork: "nft-devnet-10"
+
+  
+  extraEnv:
+    - name: FRONTEND_PPROF
+      value: "true"
+    - name: FRONTEND_SHOW_SENSITIVE_PEER_INFOS
+      value: "true"
+    - name: API_CORS_ORIGINS
+      value: "*"
+    - name: FRONTEND_ENABLE_DAS_GUARDIAN_MASS_SCAN
+      value: "true"
+  postgresql:
+    name: "dora-postgresql"
+    fullnameOverride: "dora-postgresql"
+    persistence:
+      size: "50Gi"
+
+  mevRelays:
+    - index: 0
+      name: "Flashbots"
+      url: "http://mev-relay-1.nft-devnet-10.ethpandaops.io:9062/"
+
+  authGroups:
+    pandaops:
+      credentials:
+        username: ""
+        password: "<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.nft-devnets.node_ingress.combined}>"
+
+  endpoints:
+  # Rpc
+  - url: http://prysm-geth-001:5052
+    name: rpc-prysm-geth-001
+    authGroup: pandaops
+    archive: true
+    priority: 1
+  - url: https://bn-bootnode-1.srv.nft-devnet-10.ethpandaops.io
+    name: bootnode-1
+    authGroup: pandaops
+    priority: -1
+  - url: https://bn-lighthouse-besu-1.srv.nft-devnet-10.ethpandaops.io
+    name: lighthouse-besu-1
+    authGroup: pandaops
+    priority: -1
+    archive: true
+  - url: https://bn-lighthouse-besu-2.srv.nft-devnet-10.ethpandaops.io
+    name: lighthouse-besu-2
+    authGroup: pandaops
+    priority: -1
+    archive: true
+  - url: https://bn-lighthouse-erigon-1.srv.nft-devnet-10.ethpandaops.io
+    name: lighthouse-erigon-1
+    authGroup: pandaops
+    priority: -1
+    archive: true
+  - url: https://bn-lighthouse-erigon-2.srv.nft-devnet-10.ethpandaops.io
+    name: lighthouse-erigon-2
+    authGroup: pandaops
+    priority: -1
+    archive: true
+  - url: https://bn-lighthouse-geth-1.srv.nft-devnet-10.ethpandaops.io
+    name: lighthouse-geth-1
+    authGroup: pandaops
+    priority: -1
+    archive: true
+  - url: https://bn-lighthouse-geth-2.srv.nft-devnet-10.ethpandaops.io
+    name: lighthouse-geth-2
+    authGroup: pandaops
+    priority: -1
+    archive: true
+  - url: https://bn-lighthouse-nethermind-1.srv.nft-devnet-10.ethpandaops.io
+    name: lighthouse-nethermind-1
+    authGroup: pandaops
+    priority: -1
+    archive: true
+  - url: https://bn-lighthouse-nethermind-2.srv.nft-devnet-10.ethpandaops.io
+    name: lighthouse-nethermind-2
+    authGroup: pandaops
+    priority: -1
+    archive: true
+  - url: https://bn-lighthouse-nimbusel-1.srv.nft-devnet-10.ethpandaops.io
+    name: lighthouse-nimbusel-1
+    authGroup: pandaops
+    priority: -1
+    archive: true
+  - url: https://bn-lighthouse-nimbusel-2.srv.nft-devnet-10.ethpandaops.io
+    name: lighthouse-nimbusel-2
+    authGroup: pandaops
+    priority: -1
+    archive: true
+  - url: https://bn-lighthouse-reth-1.srv.nft-devnet-10.ethpandaops.io
+    name: lighthouse-reth-1
+    authGroup: pandaops
+    priority: -1
+    archive: true
+  - url: https://bn-lighthouse-reth-2.srv.nft-devnet-10.ethpandaops.io
+    name: lighthouse-reth-2
+    authGroup: pandaops
+    priority: -1
+    archive: true
+  - url: https://bn-lodestar-geth-1.srv.nft-devnet-10.ethpandaops.io
+    name: lodestar-geth-1
+    authGroup: pandaops
+    priority: -1
+  executionEndpoints:
+  # Rpc
+  - url: http://geth-prysm-001:8545
+    name: rpc-prysm-geth-001
+    authGroup: pandaops
+    archive: true
+    priority: 1
+  - url: https://rpc-bootnode-1.srv.nft-devnet-10.ethpandaops.io
+    name: bootnode-1
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-bootnode-1.srv.nft-devnet-10.ethpandaops.io:8961
+  - url: https://rpc-lighthouse-besu-1.srv.nft-devnet-10.ethpandaops.io
+    name: lighthouse-besu-1
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-lighthouse-besu-1.srv.nft-devnet-10.ethpandaops.io:8961
+  - url: https://rpc-lighthouse-besu-2.srv.nft-devnet-10.ethpandaops.io
+    name: lighthouse-besu-2
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-lighthouse-besu-2.srv.nft-devnet-10.ethpandaops.io:8961
+  - url: https://rpc-lighthouse-erigon-1.srv.nft-devnet-10.ethpandaops.io
+    name: lighthouse-erigon-1
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-lighthouse-erigon-1.srv.nft-devnet-10.ethpandaops.io:8961
+  - url: https://rpc-lighthouse-erigon-2.srv.nft-devnet-10.ethpandaops.io
+    name: lighthouse-erigon-2
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-lighthouse-erigon-2.srv.nft-devnet-10.ethpandaops.io:8961
+  - url: https://rpc-lighthouse-geth-1.srv.nft-devnet-10.ethpandaops.io
+    name: lighthouse-geth-1
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-lighthouse-geth-1.srv.nft-devnet-10.ethpandaops.io:8961
+  - url: https://rpc-lighthouse-geth-2.srv.nft-devnet-10.ethpandaops.io
+    name: lighthouse-geth-2
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-lighthouse-geth-2.srv.nft-devnet-10.ethpandaops.io:8961
+  - url: https://rpc-lighthouse-nethermind-1.srv.nft-devnet-10.ethpandaops.io
+    name: lighthouse-nethermind-1
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-lighthouse-nethermind-1.srv.nft-devnet-10.ethpandaops.io:8961
+  - url: https://rpc-lighthouse-nethermind-2.srv.nft-devnet-10.ethpandaops.io
+    name: lighthouse-nethermind-2
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-lighthouse-nethermind-2.srv.nft-devnet-10.ethpandaops.io:8961
+  - url: https://rpc-lighthouse-nimbusel-1.srv.nft-devnet-10.ethpandaops.io
+    name: lighthouse-nimbusel-1
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-lighthouse-nimbusel-1.srv.nft-devnet-10.ethpandaops.io:8961
+  - url: https://rpc-lighthouse-nimbusel-2.srv.nft-devnet-10.ethpandaops.io
+    name: lighthouse-nimbusel-2
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-lighthouse-nimbusel-2.srv.nft-devnet-10.ethpandaops.io:8961
+  - url: https://rpc-lighthouse-reth-1.srv.nft-devnet-10.ethpandaops.io
+    name: lighthouse-reth-1
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-lighthouse-reth-1.srv.nft-devnet-10.ethpandaops.io:8961
+  - url: https://rpc-lighthouse-reth-2.srv.nft-devnet-10.ethpandaops.io
+    name: lighthouse-reth-2
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-lighthouse-reth-2.srv.nft-devnet-10.ethpandaops.io:8961
+  - url: https://rpc-lodestar-geth-1.srv.nft-devnet-10.ethpandaops.io
+    name: lodestar-geth-1
+    authGroup: pandaops
+    priority: -1
+    archive: false
+    engineSnooperUrl: http://rpc-lodestar-geth-1.srv.nft-devnet-10.ethpandaops.io:8961
