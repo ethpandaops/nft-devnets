@@ -9,10 +9,10 @@ default_ethereum_client_images:
   grandine: sifrai/grandine:1.1.4
 ### Execution layer clients
   besu: hyperledger/besu:latest
-  geth: ethereum/client-go:latest
+  geth: ethpandaops/geth:healthykim-bs-eip7975-peer
   erigon: erigontech/erigon:latest
-  nethermind: nethermind/nethermind:latest
-  reth: ghcr.io/paradigmxyz/reth:latest
+  nethermind: nethermindeth/nethermind:97ba567
+  reth: ghcr.io/paradigmxyz/reth:8399bafdbe36d9660a1752800534cf8a7cb4e6c6
   nimbusel: ethpandaops/nimbus-eth1:master
 
 # mev boost
