@@ -8,7 +8,7 @@ default_ethereum_client_images:
   teku: consensys/teku:latest
   grandine: sifrai/grandine:1.1.4
 ### Execution layer clients
-  besu: hyperledger/besu:latest
+  besu: fab10/besu:26.2-eth70
   geth: ethpandaops/geth:healthykim-bs-eip7975-peer
   erigon: erigontech/erigon:latest
   nethermind: nethermindeth/nethermind:97ba567

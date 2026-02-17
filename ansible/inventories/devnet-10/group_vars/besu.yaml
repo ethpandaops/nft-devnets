@@ -31,10 +31,12 @@ besu_container_command_extra_args:
   - --genesis-file=/network-config/besu.json
   - --bootnodes={{ ethereum_el_bootnodes | join(',') }}
   - --rpc-http-api=ADMIN,DEBUG,ETH,MINER,NET,TRACE,TXPOOL,WEB3
-  - --sync-mode=FULL
+  - --sync-mode=SNAP
   - --data-storage-format=BONSAI
   - --bonsai-limit-trie-logs-enabled=false
   - --target-gas-limit=200000000
+  - --Xsynchronizer-downloader-bodies-request-size=5
+  - --Xsynchronizer-downloader-parallelism=3
 besu_container_pull: true
 
 prometheus_config: |
